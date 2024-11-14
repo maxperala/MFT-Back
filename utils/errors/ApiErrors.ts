@@ -1,17 +1,20 @@
-
-
-
 export class InvalidDegreesError extends Error {
-    constructor() {
-        super("Degrees of image direction must be 0 < deg <= 360");
-        this.name = "InvalidDegreesError";
-    }
-};
-
+  constructor() {
+    super("Degrees of image direction must be 0 < deg <= 360");
+    this.name = "InvalidDegreesError";
+  }
+}
 
 export class InvalidUrlError extends Error {
-    constructor(msg: string) {
-        super(`Invalid URL Error: ${msg}`);
-        this.name = "InvalidUrlError";
-    }
-};
+  constructor(msg: string) {
+    super(`Invalid URL Error: ${msg}`);
+    this.name = "InvalidUrlError";
+  }
+}
+
+export class UsernameExistsError extends Error {
+  constructor() {
+    super("Username already taken");
+    this.name = "UsernameExistsError";
+  }
+}

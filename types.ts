@@ -1,21 +1,29 @@
-export interface NewPostcard {
-    title: string;
-    description: string;
-    location: Point;
-    author: string;
-    degree: Degree;
-    url: ImageURL;
-};
+import { PostcardSchema } from "./schemas/postcard";
+import { UserSchema } from "./schemas/user";
+import z from "zod";
+
+export type NewPostcard = z.infer<typeof PostcardSchema>;
 
 export interface Postcard extends NewPostcard {
-    id: string;
-};
+  id: string;
+}
 
-export type Point = {
-    lat: number;
-    lon: number;
-};
+export interface ErrorReturnForm {
+  errors: string[];
+}
 
-export type ImageURL = string & {readonly brand: unique symbol};
+export type NewUser = z.infer<typeof UserSchema>;
 
-export type Degree = number & {readonly brand: unique symbol};
+export interface User extends Omit<NewUser, "secret_code"> {
+  id: string;
+  secret_code_hash: string;
+  lvl: number;
+}
+
+export interface ExposedUser extends Omit<User, "secret_code_hash"> {
+  token: string;
+}
+
+export interface JwtPayload {
+  id: string;
+}
