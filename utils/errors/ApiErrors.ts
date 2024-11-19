@@ -18,3 +18,17 @@ export class UsernameExistsError extends Error {
     this.name = "UsernameExistsError";
   }
 }
+
+export class UserNotFoundError extends Error {
+  constructor() {
+    super("User not found");
+    this.name = "UserNotFoundError";
+  }
+}
+
+export class InvalidMapRequestError extends Error {
+  constructor() {
+    super("Invalid coordinates");
+    this.name = "InvalidMapRequest";
+  }
+}

@@ -1,9 +1,20 @@
 import { NextFunction, Request, Response } from "express";
 import { PostcardSchema } from "../schemas/postcard";
-import { UserSchema } from "../schemas/user";
+import { UserModel, UserSchema } from "../schemas/user";
 import { ZodError } from "zod";
-import { ErrorReturnForm, NewPostcard, NewUser } from "../types";
-import { UsernameExistsError } from "./errors/ApiErrors";
+import {
+  ErrorReturnForm,
+  NewPostcard,
+  NewUser,
+  ValidatedRequest,
+} from "../types";
+import {
+  InvalidMapRequestError,
+  UsernameExistsError,
+  UserNotFoundError,
+} from "./errors/ApiErrors";
+import jwt from "jsonwebtoken";
+import { SECRET } from "./config";
 
 export const validatePostRequestForPostcards = (
   req: Request<any, any, NewPostcard>,
@@ -24,6 +35,7 @@ export const errorHandler = (
   res: Response<ErrorReturnForm>,
   _next: NextFunction
 ) => {
+  // Maybe refactor this to a switch case... and implement some better logging
   console.log(error);
   if (error instanceof ZodError) {
     return res.status(400).json({
@@ -35,13 +47,18 @@ export const errorHandler = (
       errors: [error.message],
     });
   }
+  if (error instanceof UserNotFoundError) {
+    return res.status(401).json({
+      errors: [error.message],
+    });
+  }
 
   res.status(500).json({
     errors: ["An unknown error occurred"],
   });
 };
 
-export const userCreationValidator = (
+export const userValidator = (
   req: Request<any, any, NewUser>,
   _res: Response,
   next: NextFunction
@@ -49,6 +66,60 @@ export const userCreationValidator = (
   try {
     UserSchema.parse(req.body);
     next();
+  } catch (e) {
+    next(e);
+  }
+};
+
+export const authValidator = async (
+  req: ValidatedRequest,
+  _res: Response,
+  next: NextFunction
+) => {
+  try {
+    if (
+      !req.headers.authorization ||
+      !req.headers.authorization.startsWith("Bearer ")
+    )
+      throw new UserNotFoundError();
+    const token = req.headers.authorization.split(" ")[1];
+    const payload = jwt.verify(token, SECRET);
+    // This should not happen, so it's ok to handle it as a general error and just log it.
+    if (typeof payload === "string")
+      throw new Error("JWT verification failed.");
+
+    let user = await UserModel.findById(payload.id);
+    if (!user) throw new UserNotFoundError();
+    req.user = {
+      id: user._id.toString(),
+      username: user.username,
+      lvl: user.lvl,
+      secret_code_hash: user.secret_code_hash,
+    };
+    next();
+  } catch (e) {
+    next(e);
+  }
+};
+// This one is unusable for now
+export const mapReqValidator = (
+  req: ValidatedRequest,
+  _res: Response,
+  next: NextFunction
+) => {
+  try {
+    const { x, y, z } = req.params;
+    const xnum = parseFloat(x);
+    const ynum = parseFloat(y);
+    const znum = parseFloat(z);
+    if ((isNaN(xnum), isNaN(ynum), isNaN(znum))) {
+      throw new InvalidMapRequestError();
+    }
+    req.coords = {
+      x: xnum,
+      y: ynum,
+      z: znum,
+    };
   } catch (e) {
     next(e);
   }

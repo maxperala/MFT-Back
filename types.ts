@@ -1,6 +1,7 @@
 import { PostcardSchema } from "./schemas/postcard";
 import { UserSchema } from "./schemas/user";
 import z from "zod";
+import { Request } from "express";
 
 export type NewPostcard = z.infer<typeof PostcardSchema>;
 
@@ -26,4 +27,13 @@ export interface ExposedUser extends Omit<User, "secret_code_hash"> {
 
 export interface JwtPayload {
   id: string;
+}
+
+export interface ValidatedRequest extends Request {
+  user?: User;
+  coords?: {
+    x: number;
+    y: number;
+    z: number;
+  };
 }

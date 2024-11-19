@@ -1,0 +1,3 @@
+const getMap = () => {
+  return null;
+};

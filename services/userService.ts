@@ -1,9 +1,12 @@
 import { ExposedUser, NewUser, User, JwtPayload } from "../types";
 import { UserModel } from "../schemas/user";
-import { hash } from "../utils/hashing";
+import { hash, compare } from "../utils/hashing";
 import jwt from "jsonwebtoken";
 import { SECRET } from "../utils/config";
-import { UsernameExistsError } from "../utils/errors/ApiErrors";
+import {
+  UsernameExistsError,
+  UserNotFoundError,
+} from "../utils/errors/ApiErrors";
 
 export const createUser = async (user: NewUser): Promise<ExposedUser> => {
   if (await UserModel.findOne({ username: user.username })) {
@@ -25,6 +28,22 @@ export const createUser = async (user: NewUser): Promise<ExposedUser> => {
     id,
     username: newUser.username,
     lvl: newUser.lvl,
+    token,
+  };
+};
+
+export const loginUser = async (user: NewUser): Promise<ExposedUser> => {
+  const foundUser = await UserModel.findOne({ username: user.username });
+  if (!foundUser) throw new UserNotFoundError();
+  const res = await compare(user.secret_code, foundUser.secret_code_hash);
+  if (!res) throw new UserNotFoundError();
+  const id = foundUser._id.toString();
+  const payload: JwtPayload = { id };
+  const token = jwt.sign(payload, SECRET);
+  return {
+    id,
+    username: foundUser.username,
+    lvl: foundUser.lvl,
     token,
   };
 };
