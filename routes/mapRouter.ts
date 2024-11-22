@@ -12,6 +12,7 @@ mapRouter.use(authValidator);
  * low that using it for a free-to-use app is not feasible.
  * So, for now we shall use the default apple map in the frontend and maybe
  * design our own map tiles at some point or find a free suitable map.
+ * I might design my own with maptiler later on.
  */
 
 mapRouter.get("/:x/:y/:z", mapReqValidator, (req: ValidatedRequest, res) => {
