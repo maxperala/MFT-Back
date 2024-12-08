@@ -9,6 +9,7 @@ import {
   ValidatedRequest,
 } from "../types";
 import {
+  InvalidCodeError,
   InvalidMapRequestError,
   UsernameExistsError,
   UserNotFoundError,
@@ -47,7 +48,7 @@ export const errorHandler = (
       errors: [error.message],
     });
   }
-  if (error instanceof UserNotFoundError) {
+  if (error instanceof UserNotFoundError || error instanceof InvalidCodeError) {
     return res.status(401).json({
       errors: [error.message],
     });

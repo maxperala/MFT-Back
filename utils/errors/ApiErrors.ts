@@ -26,6 +26,13 @@ export class UserNotFoundError extends Error {
   }
 }
 
+export class InvalidCodeError extends Error {
+  constructor() {
+    super("Invalid secret code");
+    this.name = "InvalidCodeError";
+  }
+}
+
 export class InvalidMapRequestError extends Error {
   constructor() {
     super("Invalid coordinates");
