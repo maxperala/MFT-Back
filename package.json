@@ -7,6 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "tsc": "tsc",
     "dev": "MODE=dev ts-node-dev index.ts",
+    "cdn": "python3 testing-cdn/cdn.py",
     "start": "node ./build/index.js",
     "start:dev": "MODE=dev node ./build/index.js"
   },
