@@ -7,8 +7,10 @@ import {
   NewPostcard,
   NewUser,
   ValidatedRequest,
+  CardID,
 } from "../types";
 import {
+  InvalidCardIdError,
   InvalidCodeError,
   InvalidMapRequestError,
   UsernameExistsError,
@@ -48,7 +50,11 @@ export const errorHandler = (
       errors: [error.message],
     });
   }
-  if (error instanceof UserNotFoundError || error instanceof InvalidCodeError) {
+  if (
+    error instanceof UserNotFoundError ||
+    error instanceof InvalidCodeError ||
+    error instanceof InvalidCardIdError
+  ) {
     return res.status(401).json({
       errors: [error.message],
     });
@@ -81,8 +87,10 @@ export const authValidator = async (
     if (
       !req.headers.authorization ||
       !req.headers.authorization.startsWith("Bearer ")
-    )
+    ) {
       throw new UserNotFoundError();
+    }
+
     const token = req.headers.authorization.split(" ")[1];
     const payload = jwt.verify(token, SECRET);
     // This should not happen, so it's ok to handle it as a general error and just log it.
@@ -96,13 +104,14 @@ export const authValidator = async (
       username: user.username,
       lvl: user.lvl,
       secret_code_hash: user.secret_code_hash,
+      unlocked: user.unlocked.map((id) => id.toString()),
     };
     next();
   } catch (e) {
     next(e);
   }
 };
-// This one is unusable for now
+// This one is unusable for now, and probably unecessary
 export const mapReqValidator = (
   req: ValidatedRequest,
   _res: Response,
@@ -121,6 +130,22 @@ export const mapReqValidator = (
       y: ynum,
       z: znum,
     };
+  } catch (e) {
+    next(e);
+  }
+};
+
+// Probably the id can't be extracted before the route itself... I leave this here anyways incase needed later
+export const unlockRequestValidator = (
+  req: ValidatedRequest,
+  _res: Response,
+  next: NextFunction
+) => {
+  try {
+    const cardId: CardID | undefined = req.params.id;
+    if (!cardId) {
+      throw new InvalidCardIdError();
+    }
   } catch (e) {
     next(e);
   }

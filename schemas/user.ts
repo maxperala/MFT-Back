@@ -25,6 +25,7 @@ const mongoSchema = new Schema(
       type: Number,
       required: true,
     },
+    unlocked: [{ type: Schema.Types.ObjectId, ref: "Postcard" }],
   },
   {
     toJSON: {

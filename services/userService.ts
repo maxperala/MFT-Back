@@ -18,6 +18,7 @@ export const createUser = async (user: NewUser): Promise<ExposedUser> => {
     username: user.username,
     secret_code_hash,
     lvl: 0,
+    unlocked: [],
   };
   const newUser = new UserModel(newUserData);
   await newUser.save();
@@ -29,11 +30,14 @@ export const createUser = async (user: NewUser): Promise<ExposedUser> => {
     username: newUser.username,
     lvl: newUser.lvl,
     token,
+    unlocked: [],
   };
 };
 
 export const loginUser = async (user: NewUser): Promise<ExposedUser> => {
-  const foundUser = await UserModel.findOne({ username: user.username });
+  const foundUser = await UserModel.findOne({
+    username: user.username,
+  });
   if (!foundUser) throw new UserNotFoundError();
   const res = await compare(user.secret_code, foundUser.secret_code_hash);
   if (!res) throw new InvalidCodeError();
@@ -45,5 +49,6 @@ export const loginUser = async (user: NewUser): Promise<ExposedUser> => {
     username: foundUser.username,
     lvl: foundUser.lvl,
     token,
+    unlocked: foundUser.unlocked.map((id) => id.toString()),
   };
 };

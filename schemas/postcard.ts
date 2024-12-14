@@ -7,15 +7,21 @@ import { model, Schema } from "mongoose";
 extendZod(z);
 
 export const PostcardSchema = z.object({
-  title: z
+  title_en: z
     .string()
     .min(3, "Please provide a title with at least 3 characters")
-    .max(100, "Title too long"),
-
-  description: z
+    .max(50, "Title too long"),
+  title_fi: z
     .string()
-    .min(10, "Please provide a description of at least 10 characters")
-    .max(400, "Description too long"),
+    .min(3, "Please provide a title with at least 3 characters")
+    .max(50, "Title too long"),
+
+  description_en: z
+    .string()
+    .min(10, "Please provide a description of at least 10 characters"),
+  description_fi: z
+    .string()
+    .min(10, "Please provide a description of at least 10 characters"),
 
   location: z.object({
     lat: z
@@ -29,7 +35,7 @@ export const PostcardSchema = z.object({
       .max(180, "Longitude must be between -180 and 180"),
   }),
 
-  author: z.string().min(1, "Author name is required"),
+  source: z.string().min(1, "Author name is required"),
 
   degree: z
     .number()
@@ -37,6 +43,8 @@ export const PostcardSchema = z.object({
     .max(360, "Degree cannot exceed 360"),
 
   url: z.string().url("Please provide a valid URL"),
+  year: z.string(),
+  photographer: z.string(),
 });
 
 const mongoSchema = zodSchemaRaw(PostcardSchema);

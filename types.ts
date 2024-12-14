@@ -19,6 +19,7 @@ export interface User extends Omit<NewUser, "secret_code"> {
   id: string;
   secret_code_hash: string;
   lvl: number;
+  unlocked: CardID[];
 }
 
 export interface ExposedUser extends Omit<User, "secret_code_hash"> {
@@ -36,4 +37,10 @@ export interface ValidatedRequest extends Request {
     y: number;
     z: number;
   };
+}
+
+export type CardID = String;
+
+export interface UnlockedResponse {
+  unlocked: CardID[];
 }

@@ -39,3 +39,10 @@ export class InvalidMapRequestError extends Error {
     this.name = "InvalidMapRequest";
   }
 }
+
+export class InvalidCardIdError extends Error {
+  constructor() {
+    super("Invalid card ID");
+    this.name = "InvalidCardIdError";
+  }
+}
