@@ -1,0 +1,10 @@
+{
+  "packs": [
+    {
+      "name": "Postcards from Pyynikki",
+      "name_fi": "Postikortteja Pyynikiltä",
+      "image_url": "http://URLHERE.fi/null.png",
+      "paid": false
+    }
+  ]
+}

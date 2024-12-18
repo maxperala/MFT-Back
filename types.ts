@@ -15,11 +15,22 @@ export interface ErrorReturnForm {
 
 export type NewUser = z.infer<typeof UserSchema>;
 
+export type NewPack = Omit<Pack, "id">;
+
+export interface Pack {
+  id: string;
+  name: string;
+  name_fi: string;
+  image_url: string;
+  paid: boolean;
+}
+
 export interface User extends Omit<NewUser, "secret_code"> {
   id: string;
   secret_code_hash: string;
   lvl: number;
   unlocked: CardID[];
+  packs: PackID[];
 }
 
 export interface ExposedUser extends Omit<User, "secret_code_hash"> {
@@ -39,7 +50,9 @@ export interface ValidatedRequest extends Request {
   };
 }
 
-export type CardID = String;
+export type CardID = string;
+
+export type PackID = string;
 
 export interface UnlockedResponse {
   unlocked: CardID[];

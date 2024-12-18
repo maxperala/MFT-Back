@@ -46,3 +46,17 @@ export class InvalidCardIdError extends Error {
     this.name = "InvalidCardIdError";
   }
 }
+
+export class UnauthorizedPurchaseError extends Error {
+  constructor() {
+    super("Unauthorized purchase");
+    this.name = "UnauthorizedPurchaseError";
+  }
+}
+
+export class InvalidPackIdError extends Error {
+  constructor() {
+    super("Invalid Pack ID");
+    this.name = "InvalidPackIdError";
+  }
+}

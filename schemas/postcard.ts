@@ -1,10 +1,9 @@
 import z from "zod";
-import { extendZod, zodSchemaRaw } from "@zodyac/zod-mongoose";
-import { model, Schema } from "mongoose";
+
+import { model, Schema, isValidObjectId } from "mongoose";
 
 // We use zod-mongoose to automatically create the schema. Will change if bugs are found.
 // Typescript typings are also infered from this Zod schema.
-extendZod(z);
 
 export const PostcardSchema = z.object({
   title_en: z
@@ -45,19 +44,77 @@ export const PostcardSchema = z.object({
   url: z.string().url("Please provide a valid URL"),
   year: z.string(),
   photographer: z.string(),
+  pack: z
+    .string()
+    .refine((id) => isValidObjectId(id), { message: "Not a valid ObjectID" }),
 });
 
-const mongoSchema = zodSchemaRaw(PostcardSchema);
-
-export const postcardModel = model(
-  "Postcard",
-  new Schema(mongoSchema, {
+const mongoSchema = new Schema(
+  {
+    title_en: {
+      type: String,
+      required: true,
+    },
+    title_fi: {
+      type: String,
+      required: true,
+    },
+    description_en: {
+      type: String,
+      required: true,
+    },
+    description_fi: {
+      type: String,
+      required: true,
+    },
+    location: {
+      lat: {
+        type: Number,
+        required: true,
+      },
+      lon: {
+        type: Number,
+        required: true,
+      },
+    },
+    source: {
+      type: String,
+      required: true,
+    },
+    degree: {
+      type: Number,
+      required: true,
+    },
+    url: {
+      type: String,
+      required: true,
+    },
+    year: {
+      type: String,
+      required: true,
+    },
+    photographer: {
+      type: String,
+      required: true,
+    },
+    pack: {
+      type: Schema.Types.ObjectId,
+      ref: "Pack",
+      required: true,
+    },
+  },
+  {
     toJSON: {
       transform: (_doc, ret) => {
         ret.id = ret._id.toString();
+        ret.pack = ret.pack.toString();
         delete ret._id;
         delete ret.__v;
       },
     },
-  })
+  }
 );
+
+//const mongoSchema = zodSchemaRaw(PostcardSchema);
+
+export const postcardModel = model("Postcard", mongoSchema);

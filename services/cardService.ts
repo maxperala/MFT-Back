@@ -15,8 +15,8 @@ export const addNewCard = async (card: NewPostcard): Promise<Postcard> => {
   return obj as Postcard;
 };
 
-export const getAllCards = async (): Promise<Postcard[]> => {
-  const res = await postcardModel.find({});
+export const getAllCards = async (packs: string[]): Promise<Postcard[]> => {
+  const res = await postcardModel.find({ pack: { $in: packs } });
   return res.map((i) => {
     const item = i.toJSON() as unknown;
     return item as Postcard;

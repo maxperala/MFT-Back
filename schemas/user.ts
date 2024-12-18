@@ -1,10 +1,13 @@
 import z from "zod";
 import { model, Schema } from "mongoose";
 
-// The app is intentionally unsecure. There is nothing in the user that would
-// require for security, and I prefer to keep it this way to make the login process
-// as easy as possible. The idea is that if you get a new phone etc, you can't really log in to
-// the same account anymore and it does not matter in this case.
+/**
+ * The card includes a reference to the pack it belongs to.
+ * Level prop is currently implemented but I'm gravitating towards
+ * the final product not having levels. Just a progress on how many cards
+ * have been discovered and maybe some achievements. I feel like adding
+ * levels does not actually add anything to the experience.
+ */
 export const UserSchema = z.object({
   username: z.string().min(4).max(10),
   secret_code: z.string(),
@@ -26,6 +29,7 @@ const mongoSchema = new Schema(
       required: true,
     },
     unlocked: [{ type: Schema.Types.ObjectId, ref: "Postcard" }],
+    packs: [{ type: Schema.Types.ObjectId, ref: "Pack" }],
   },
   {
     toJSON: {

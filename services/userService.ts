@@ -8,6 +8,7 @@ import {
   UsernameExistsError,
   UserNotFoundError,
 } from "../utils/errors/ApiErrors";
+import { addFreePacks } from "../utils/packUtils";
 
 export const createUser = async (user: NewUser): Promise<ExposedUser> => {
   if (await UserModel.findOne({ username: user.username })) {
@@ -19,9 +20,12 @@ export const createUser = async (user: NewUser): Promise<ExposedUser> => {
     secret_code_hash,
     lvl: 0,
     unlocked: [],
+    packs: [],
   };
+  // This part currently makes 2 db calls (one more in addFreePacks). I should refactor it so it does only one
   const newUser = new UserModel(newUserData);
   await newUser.save();
+  const packs = await addFreePacks(newUser._id);
   const id = newUser._id.toString();
   const payload: JwtPayload = { id };
   const token = jwt.sign(payload, SECRET);
@@ -31,9 +35,14 @@ export const createUser = async (user: NewUser): Promise<ExposedUser> => {
     lvl: newUser.lvl,
     token,
     unlocked: [],
+    packs: packs,
   };
 };
 
+/**
+ * I could check if new free packs are available on each login/start of app.
+ * But it feels more special IMO if the user needs to go and collect it from the store page (to be implemented later)
+ */
 export const loginUser = async (user: NewUser): Promise<ExposedUser> => {
   const foundUser = await UserModel.findOne({
     username: user.username,
@@ -50,5 +59,6 @@ export const loginUser = async (user: NewUser): Promise<ExposedUser> => {
     lvl: foundUser.lvl,
     token,
     unlocked: foundUser.unlocked.map((id) => id.toString()),
+    packs: foundUser.packs.map((id) => id.toString()),
   };
 };

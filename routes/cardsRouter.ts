@@ -33,7 +33,7 @@ cardsRouter.get(
   async (req: ValidatedRequest, res: Response<Postcard[]>, next) => {
     try {
       console.log(req.user);
-      const cards = await getAllCards();
+      const cards = await getAllCards(req.user ? req.user.packs : []);
       console.log(cards);
       res.status(200).json(cards);
     } catch (e) {
