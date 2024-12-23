@@ -1,4 +1,5 @@
 import express, { Request, Response } from "express";
+import path from "path";
 import { errorHandler } from "./utils/middleware";
 import { PORT } from "./utils/config";
 import cardsRouter from "./routes/cardsRouter";
@@ -10,6 +11,7 @@ import packsRouter from "./routes/packsRouter";
 loadPacksIntoDB();
 const app = express();
 app.use(express.json());
+app.use("/images", express.static(path.join(__dirname, "public/images")));
 app.use("/api/postcards", cardsRouter);
 app.use("/api/users", userRouter);
 app.use("/api/packs", packsRouter);
