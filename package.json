@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "tsc": "tsc && copyfiles \"public/**/*\" build && copyfiles packs.json build",
+    "tsc": "tsc",
     "dev": "MODE=dev ts-node-dev index.ts",
     "cdn": "python3 testing-cdn/cdn.py",
     "start": "node ./build/index.js",

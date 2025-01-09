@@ -4,6 +4,3 @@ build
 node_modules
 testing-cdn/images
 .DS_Store
-fly.toml
-Dockerfile
-.dockerignore
