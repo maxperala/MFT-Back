@@ -2,13 +2,16 @@ import { ExposedUser, NewUser, User, JwtPayload } from "../types";
 import { UserModel } from "../schemas/user";
 import { hash, compare } from "../utils/hashing";
 import jwt from "jsonwebtoken";
-import { SECRET } from "../utils/config";
+import { BACKUP_LEVEL, SECRET } from "../utils/config";
 import {
   InvalidCodeError,
   UsernameExistsError,
   UserNotFoundError,
 } from "../utils/errors/ApiErrors";
 import { addFreePacks } from "../utils/packUtils";
+import { LEVELS } from "../utils/config";
+
+const zeroLevel = LEVELS.find((l) => l.lvl === 0);
 
 export const createUser = async (user: NewUser): Promise<ExposedUser> => {
   if (await UserModel.findOne({ username: user.username })) {
@@ -18,7 +21,7 @@ export const createUser = async (user: NewUser): Promise<ExposedUser> => {
   const newUserData: Omit<User, "id"> = {
     username: user.username,
     secret_code_hash,
-    lvl: 0,
+    lvl: zeroLevel ? zeroLevel : BACKUP_LEVEL,
     unlocked: [],
     packs: [],
   };

@@ -1,0 +1,65 @@
+{
+    "levels": [
+         {
+            "lvl": 0,
+            "name_fi": "Muukalainen",
+            "name_en": "Stranger",
+            "limit": 0
+        },
+        {
+            "lvl": 1,
+            "name_fi": "Ohikulkija",
+            "name_en": "Bypasser",
+            "limit": 1
+        },
+        {
+            "lvl": 2,
+            "name_fi": "Kotiseutumatkailija",
+            "name_en": "Tourist",
+            "limit": 3
+        },
+        {
+            "lvl": 3,
+            "name_fi": "Tamperelainen",
+            "name_en": "Tampere local",
+            "limit": 6
+        },
+        {
+            "lvl": 4,
+            "name_fi": "Seikkalija",
+            "name_en": "Adventurer",
+            "limit": 10
+        },
+        {
+            "lvl": 5,
+            "name_fi": "Asiantuntija",
+            "name_en": "Expert",
+            "limit": 15
+        },
+        {
+            "lvl": 6,
+            "name_fi": "Von Nottbeck",
+            "name_en": "Von Nottbeck",
+            "limit": 20
+        },
+        {
+            "lvl": 7,
+            "name_fi": "Historiantutkija",
+            "name_en": "History expert",
+            "limit": 25
+        },
+        {
+            "lvl": 8,
+            "name_fi": "Pyynikin Herra Kivi",
+            "name_en": "Mr Stone of Pyynikin",
+            "limit": 30
+        },
+        {
+            "lvl": 9,
+            "name_fi": "Emil Aaltonen",
+            "name_en": "Emil Aaltonen",
+            "limit": 35
+        }
+        
+    ]
+}

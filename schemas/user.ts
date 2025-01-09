@@ -25,7 +25,24 @@ const mongoSchema = new Schema(
       required: true,
     },
     lvl: {
-      type: Number,
+      type: {
+        lvl: {
+          type: Number,
+          required: true,
+        },
+        name_en: {
+          type: String,
+          required: true,
+        },
+        name_fi: {
+          type: String,
+          required: true,
+        },
+        limit: {
+          type: Number,
+          required: true,
+        },
+      },
       required: true,
     },
     unlocked: [{ type: Schema.Types.ObjectId, ref: "Postcard" }],

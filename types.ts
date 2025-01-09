@@ -28,7 +28,7 @@ export interface Pack {
 export interface User extends Omit<NewUser, "secret_code"> {
   id: string;
   secret_code_hash: string;
-  lvl: number;
+  lvl: Level;
   unlocked: CardID[];
   packs: PackID[];
 }
@@ -56,4 +56,20 @@ export type PackID = string;
 
 export interface UnlockedResponse {
   unlocked: CardID[];
+}
+
+export interface Level {
+  lvl: number;
+  name_fi: string;
+  name_en: string;
+  limit: number;
+}
+
+export interface LevelData {
+  levels: Level[];
+}
+
+export interface DiscoverReturnData {
+  discovered: string[];
+  newLevel: Level;
 }

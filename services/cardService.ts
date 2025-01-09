@@ -1,4 +1,4 @@
-import { NewPostcard, Postcard } from "../types";
+import { DiscoverReturnData, NewPostcard, Postcard } from "../types";
 import { postcardModel } from "../schemas/postcard";
 import {
   InvalidCardIdError,
@@ -6,6 +6,7 @@ import {
 } from "../utils/errors/ApiErrors";
 import { UserModel } from "../schemas/user";
 import { isValidObjectId } from "mongoose";
+import { levelUpIfNecessary } from "../utils/cardsUtils";
 
 export const addNewCard = async (card: NewPostcard): Promise<Postcard> => {
   const newPostcard = new postcardModel(card);
@@ -26,7 +27,7 @@ export const getAllCards = async (packs: string[]): Promise<Postcard[]> => {
 export const discoverCard = async (
   id: string,
   userId: string
-): Promise<string[]> => {
+): Promise<DiscoverReturnData> => {
   if (!isValidObjectId(id)) throw new InvalidCardIdError();
   const card = await postcardModel.findById(id);
   if (!card) throw new InvalidCardIdError();
@@ -37,5 +38,13 @@ export const discoverCard = async (
     user.unlocked = [...user.unlocked, card._id];
     await user.save();
   }
-  return user.unlocked.map((id) => id.toString());
+  const lvl = await levelUpIfNecessary(
+    user._id.toString(),
+    user.lvl,
+    user.unlocked.length
+  );
+  return {
+    discovered: user.unlocked.map((id) => id.toString()),
+    newLevel: lvl,
+  };
 };

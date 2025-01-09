@@ -1,6 +1,7 @@
 import { Router, Response } from "express";
 import { validatePostRequestForPostcards as validate } from "../utils/middleware";
 import {
+  DiscoverReturnData,
   NewPostcard,
   Postcard,
   UnlockedResponse,
@@ -62,15 +63,13 @@ cardsRouter.get(
 // Checking for user doesn't matter at this point, since the validator does not let a bad request trough. Purely for ts stuff
 cardsRouter.post(
   "/unlocked/:id",
-  async (req: ValidatedRequest, res: Response<UnlockedResponse>, next) => {
+  async (req: ValidatedRequest, res: Response<DiscoverReturnData>, next) => {
     try {
       const id: string = req.params.id;
       if (!id) throw new InvalidCardIdError();
       if (!req.user) throw new UserNotFoundError();
       const discovered = await discoverCard(id, req.user.id);
-      res.status(200).json({
-        unlocked: discovered,
-      });
+      res.status(200).json(discovered);
     } catch (e) {
       next(e);
     }
