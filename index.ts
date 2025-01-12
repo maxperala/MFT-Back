@@ -11,7 +11,14 @@ import packsRouter from "./routes/packsRouter";
 loadPacksIntoDB();
 const app = express();
 app.use(express.json());
-app.use("/images", express.static(path.join(__dirname, "public/images")));
+app.use(
+  "/images",
+  express.static(path.join(__dirname, "public/images"), {
+    maxAge: "1y",
+    etag: true,
+    lastModified: true,
+  })
+);
 app.use("/api/postcards", cardsRouter);
 app.use("/api/users", userRouter);
 app.use("/api/packs", packsRouter);
