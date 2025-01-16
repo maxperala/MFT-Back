@@ -106,6 +106,7 @@ export const authValidator = async (
       secret_code_hash: user.secret_code_hash,
       unlocked: user.unlocked.map((id) => id.toString()),
       packs: user.packs.map((id) => id.toString()),
+      stamps: user.stamps.map((id) => id.toString()),
     };
     next();
   } catch (e) {

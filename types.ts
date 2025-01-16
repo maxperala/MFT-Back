@@ -25,12 +25,33 @@ export interface Pack {
   paid: boolean;
 }
 
+export type StampType = "onCompletion" | "firstTimeUse";
+
+export interface FirstTimeStamp {
+  id: string;
+  asset: string;
+  description_fi: string;
+  description_en: string;
+  type: StampType;
+}
+
+export interface OnCompletionStamp extends FirstTimeStamp {
+  pack: string;
+}
+export interface SomeNewStamp extends Omit<FirstTimeStamp, "id"> {
+  pack?: string;
+}
+export interface SomeStamp extends SomeNewStamp {
+  id: string;
+}
+
 export interface User extends Omit<NewUser, "secret_code"> {
   id: string;
   secret_code_hash: string;
   lvl: Level;
   unlocked: CardID[];
   packs: PackID[];
+  stamps: StampID[];
 }
 
 export interface ExposedUser extends Omit<User, "secret_code_hash"> {
@@ -54,6 +75,8 @@ export type CardID = string;
 
 export type PackID = string;
 
+export type StampID = string;
+
 export interface UnlockedResponse {
   unlocked: CardID[];
 }
@@ -72,4 +95,5 @@ export interface LevelData {
 export interface DiscoverReturnData {
   discovered: string[];
   newLevel: Level;
+  newStamps: StampID[];
 }

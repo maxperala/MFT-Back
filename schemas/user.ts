@@ -9,7 +9,7 @@ import { model, Schema } from "mongoose";
  * levels does not actually add anything to the experience.
  */
 export const UserSchema = z.object({
-  username: z.string().min(4).max(10),
+  username: z.string().min(4).max(15),
   secret_code: z.string(),
 });
 
@@ -47,6 +47,7 @@ const mongoSchema = new Schema(
     },
     unlocked: [{ type: Schema.Types.ObjectId, ref: "Postcard" }],
     packs: [{ type: Schema.Types.ObjectId, ref: "Pack" }],
+    stamps: [{ type: Schema.Types.ObjectId, ref: "Stamp" }],
   },
   {
     toJSON: {

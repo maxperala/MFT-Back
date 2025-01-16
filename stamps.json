@@ -1,0 +1,17 @@
+{
+  "stamps": [
+    {
+      "asset": "https://pkp-backend.fly.dev/images/stamps/first_use.png",
+      "description_fi": "Annoit sovellukselle mahdollisuuden",
+      "description_en": "You gave the app a chance",
+      "type": "firstTimeUse"
+    },
+    {
+      "asset": "https://pkp-backend.fly.dev/images/stamps/pyynikki_done.png",
+      "description_fi": "Löysit kaikki Pyynikin kohteet, hienoa!",
+      "description_en": "You found all the Pyynikki locations, great job!",
+      "type": "onCompletion",
+      "pack": "6762b150ce7a962c80a9a822"
+    }
+  ]
+}

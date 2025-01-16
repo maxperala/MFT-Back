@@ -7,6 +7,7 @@ import {
 import { UserModel } from "../schemas/user";
 import { isValidObjectId } from "mongoose";
 import { levelUpIfNecessary } from "../utils/cardsUtils";
+import { addStampsIfNecessary } from "../utils/stampUtils";
 
 export const addNewCard = async (card: NewPostcard): Promise<Postcard> => {
   const newPostcard = new postcardModel(card);
@@ -43,8 +44,10 @@ export const discoverCard = async (
     user.lvl,
     user.unlocked.length
   );
+  const stamps = await addStampsIfNecessary(user._id);
   return {
     discovered: user.unlocked.map((id) => id.toString()),
     newLevel: lvl,
+    newStamps: stamps,
   };
 };

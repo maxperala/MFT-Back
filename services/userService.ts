@@ -10,6 +10,7 @@ import {
 } from "../utils/errors/ApiErrors";
 import { addFreePacks } from "../utils/packUtils";
 import { LEVELS } from "../utils/config";
+import { addFirstUseStamps } from "../utils/stampUtils";
 
 const zeroLevel = LEVELS.find((l) => l.lvl === 0);
 
@@ -24,11 +25,13 @@ export const createUser = async (user: NewUser): Promise<ExposedUser> => {
     lvl: zeroLevel ? zeroLevel : BACKUP_LEVEL,
     unlocked: [],
     packs: [],
+    stamps: [],
   };
   // This part currently makes 2 db calls (one more in addFreePacks). I should refactor it so it does only one
   const newUser = new UserModel(newUserData);
   await newUser.save();
   const packs = await addFreePacks(newUser._id);
+  const stamps = await addFirstUseStamps(newUser._id);
   const id = newUser._id.toString();
   const payload: JwtPayload = { id };
   const token = jwt.sign(payload, SECRET);
@@ -39,6 +42,7 @@ export const createUser = async (user: NewUser): Promise<ExposedUser> => {
     token,
     unlocked: [],
     packs: packs,
+    stamps: stamps,
   };
 };
 
@@ -63,5 +67,6 @@ export const loginUser = async (user: NewUser): Promise<ExposedUser> => {
     token,
     unlocked: foundUser.unlocked.map((id) => id.toString()),
     packs: foundUser.packs.map((id) => id.toString()),
+    stamps: foundUser.stamps.map((id) => id.toString()),
   };
 };

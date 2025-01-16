@@ -6,9 +6,11 @@ import cardsRouter from "./routes/cardsRouter";
 import userRouter from "./routes/userRouter";
 import { loadPacksIntoDB } from "./utils/packUtils";
 import packsRouter from "./routes/packsRouter";
+import { loadStampsIntoDB } from "./utils/stampUtils";
 
-// Used to load the pack data from the JSON file into Mongo. If there are new packs.
+// Used to load the pack data from the JSON file into Mongo. If there are new packs. And the same for stamps :)
 loadPacksIntoDB();
+loadStampsIntoDB();
 const app = express();
 app.use(express.json());
 app.use(
