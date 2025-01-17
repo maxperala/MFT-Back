@@ -7,6 +7,7 @@ import userRouter from "./routes/userRouter";
 import { loadPacksIntoDB } from "./utils/packUtils";
 import packsRouter from "./routes/packsRouter";
 import { loadStampsIntoDB } from "./utils/stampUtils";
+import stampRouter from "./routes/stampRouter";
 
 // Used to load the pack data from the JSON file into Mongo. If there are new packs. And the same for stamps :)
 loadPacksIntoDB();
@@ -24,6 +25,7 @@ app.use(
 app.use("/api/postcards", cardsRouter);
 app.use("/api/users", userRouter);
 app.use("/api/packs", packsRouter);
+app.use("/api/stamps", stampRouter);
 
 app.get("/", (_req: Request, res: Response) => {
   res.status(200).send("Tervetuloa Pyynikin Postikortit API:hin.");

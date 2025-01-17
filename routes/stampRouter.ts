@@ -4,11 +4,11 @@ import { SomeStamp, ValidatedRequest } from "../types";
 import { getAllStamps } from "../services/stampService";
 
 // Base url for this router is api/stamps
-const packsRouter: Router = Router();
+const stampRouter: Router = Router();
 
-packsRouter.use(authValidator);
+stampRouter.use(authValidator);
 
-packsRouter.get(
+stampRouter.get(
   "/",
   async (_req: ValidatedRequest, res: Response<SomeStamp[]>, next) => {
     try {
@@ -19,3 +19,5 @@ packsRouter.get(
     }
   }
 );
+
+export default stampRouter;
