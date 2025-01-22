@@ -1,15 +1,15 @@
 {
   "name": "memories-from-tampere",
   "version": "0.0.1",
-  "description": "Backend Memories from Tampere mobiilisovellukselle",
+  "description": "Backend Memories From Tampere mobiilisovellukselle",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "tsc": "tsc",
-    "dev": "MODE=dev ts-node-dev index.ts",
+    "dev": "cross-env MODE=dev ts-node-dev index.ts",
     "cdn": "python3 testing-cdn/cdn.py",
     "start": "node ./build/index.js",
-    "start:dev": "MODE=dev node ./build/index.js"
+    "start:dev": "cross-env MODE=dev node ./build/index.js"
   },
   "author": "Max Perälä",
   "license": "ISC",
@@ -21,6 +21,7 @@
     "@types/node": "^22.9.0",
     "@types/typescript": "^0.4.29",
     "copyfiles": "^2.4.1",
+    "cross-env": "^7.0.3",
     "dotenv": "^16.4.5",
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.6.3"

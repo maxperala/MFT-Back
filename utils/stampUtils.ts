@@ -10,10 +10,10 @@ export const loadStampsIntoDB = async () => {
   const stamps: SomeNewStamp[] = stampData.stamps;
 
   const allStamps = await StampModel.find({});
-  const allPackDescriptions = allStamps.map((stamp) => stamp.description_en);
+  const allStampDescriptions = allStamps.map((stamp) => stamp.description_en);
 
   const stampsToAdd = stamps.filter(
-    (stamp) => !allPackDescriptions.includes(stamp.description_en)
+    (stamp) => !allStampDescriptions.includes(stamp.description_en)
   );
 
   if (stampsToAdd.length > 0) {

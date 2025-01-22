@@ -1,6 +1,9 @@
 import mongoose from "mongoose";
 import { Secret } from "jsonwebtoken";
 import { Level, LevelData } from "../types";
+import { loadCardsIntoDB } from "./cardsUtils";
+import { loadStampsIntoDB } from "./stampUtils";
+import { loadPacksIntoDB } from "./packUtils";
 const lvlData: LevelData = require("../levels.json");
 // Set MODE variable to ENV in package.json if you wish to use a dotenv file :)
 if (process.env.MODE === "dev") {
@@ -31,5 +34,19 @@ const BACKUP_LEVEL: Level = {
   name_en: "Stranger",
   limit: 0,
 };
+
+export const initialize = async () => {
+  try {
+    await loadCardsIntoDB();
+    await loadPacksIntoDB();
+    await loadStampsIntoDB();
+  } catch (e) {
+    console.log(e);
+    throw new Error("Failed to initialize the database, check syntax of data json files and try again!");
+  }
+
+  
+  
+}
 
 export { PORT, DB_KEY, SECRET, LEVELS, BACKUP_LEVEL };

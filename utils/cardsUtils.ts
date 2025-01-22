@@ -1,7 +1,9 @@
 import { UserModel } from "../schemas/user";
 import { UserNotFoundError } from "./errors/ApiErrors";
 import { LEVELS } from "./config";
-import { Level } from "../types";
+import { Level, NewPostcard } from "../types";
+import { postcardModel, PostcardSchema } from "../schemas/postcard";
+const cardData = require("../cards.json");
 
 const levelUp = async (id: string, newLevel: Level): Promise<Level> => {
   const userObj = await UserModel.findByIdAndUpdate(
@@ -29,3 +31,22 @@ export const levelUpIfNecessary = async (
 
   return newLevel;
 };
+
+
+export const loadCardsIntoDB = async () => {
+  const cards: NewPostcard[] = cardData.cards;
+
+  const allCards = await postcardModel.find({});
+  const alreadyAddedCardTitles = allCards.map((card) => card.title_en);
+
+  const cardsToAdd = cards.filter((card) => !alreadyAddedCardTitles.includes(card.title_en));
+
+  if (cardsToAdd.length > 0) {
+    cardsToAdd.forEach((card) => PostcardSchema.parse(card));
+    await postcardModel.insertMany(cardsToAdd);
+    console.log(`Added ${cardsToAdd.length} new cards.`);
+  } else {
+    console.log("No new stamps to add");
+  }
+
+}

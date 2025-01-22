@@ -93,9 +93,10 @@ const mongoSchema = new Schema(
       type: String,
       required: true,
     },
+    // I'm currently using empty strings if the photographer is uknown. This is maybe not the 'best' practice, but works. I also need the field to still be present because the frontend is designed that way
     photographer: {
       type: String,
-      required: true,
+      default: "",
     },
     pack: {
       type: Schema.Types.ObjectId,

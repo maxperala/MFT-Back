@@ -1,0 +1,353 @@
+{
+  "cards": [
+  
+  {
+    "title_en": "Pyynikki Observation Tower",
+    "title_fi": "Pyynikin Näkötorni",
+    "description_en": "In 1888, the city of Tampere built a wooden observation tower atop Pyynikinharju. The spot was already well-known, thanks to the earlier Ilomäki Pavilion, which lent the new structure its nickname, Ilomäki’s Tower. However, this original wooden tower met a tragic end during the Battle of Tampere in 1918, when it was destroyed in the chaos of war.\n\nThe tower we know today, crafted from striking red granite, was erected in 1929 to celebrate Tampere's 150th anniversary. But its grand opening didn’t go as planned—celebrations were overshadowed by the tragic sinking of the steamboat Kuru, which cast a somber shadow over the year. The official inauguration wasn’t held until the 1980s, decades after its completion.\n\nOver the years, the tower has served many roles, including an air surveillance post and a radio station. Today, it’s best known as a beloved landmark standing at Tampere’s highest point. Visitors flock not only for the stunning views but also for the cozy café at its base, renowned across Finland for its legendary doughnuts.",
+    "description_fi": "Tampereen kaupunki rakennutti Pyynikinharjulle puisen näkötornin vuonna 1888. Torni sai lempinimen Ilomäen näkötorni aikaisemmin paikalla sijainneen Ilomäen huvilahuoneen mukaan. Alkuperäinen torni kuitenkin tuhoutui vuonna 1918 Tampereen taistelun myllerryksessä.\n\nNykyinen punagraniittinen näkötorni valmistui vuonna 1929, kun Tampere täytti 150 vuotta. Juhlatunnelma jäi kuitenkin vaisuksi, sillä saman vuoden syyskuussa tapahtunut Höyrylaiva Kurun traaginen onnettomuus hiljensi kaupungin. Tornin virallisia vihkiäisiä vietettiin vasta 1980-luvulla.\n\nVuosien saatossa torni on toiminut muun muassa ilmavalvonta-asemana ja radioasemana. Nykyään se tunnetaan ennen kaikkea yhtenä Tampereen rakastetuimmista maamerkeistä. Tornin juurella sijaitseva kahvila ja sen maankuulut munkit houkuttelevat vierailijoita läheltä ja kaukaa – näkymien lisäksi tietenkin!",
+    "location": {
+      "lat": 61.496,
+      "lon": 23.7329
+    },
+    "source": "Tampereen Museot",
+    "degree": 300,
+    "url": "https://pkp-backend.fly.dev/images/4.webp",
+    "year": "1930-1949",
+    "photographer": "E. A. Bergrius",
+    "pack": "6762b150ce7a962c80a9a822"
+  },
+  
+  {
+    "title_en": "Thermopylae Gorge",
+    "title_fi": "Termopyleen Sola",
+    "description_en": "South of Pyynikinharju lies a rocky gorge known as Termopyleen Sola. Its name is inspired by the legendary Thermopylae Pass in Greece, famous for the historic battle fought there. As Tampere grew into an industrial hub, this gorge became an essential pathway connecting Pyynikki to Pyhäjärvi.\n\nThe eastern rock wall of the gorge is known as Nimikallio (Name Rock), named after the countless inscriptions carved into its surface over the years. As you can see from the photo, Nimikallio once offered breathtaking views of Pyhäjärvi and its surroundings. Today, those vistas are somewhat obscured by trees that have grown up over time, but the rich history of the area more than makes up for it.",
+    "description_fi": "Pyynikinharjulta etelään laskevaa kalliorotkoa kutsutaan Termopyleen solaksi. Nimi juontaa juurensa Kreikan kuuluisaan Thermopylain solaan, jossa käytiin historiallinen taistelu. Tampereen teollistuessa solasta tuli tärkeä kulkuväylä, joka yhdisti Pyynikinharjun ja Pyhäjärven toisiinsa.\n\nRotkon itäseinämää kutsutaan Nimikallioksi, sillä sen pintaan on kaiverrettu vuosien saatossa lukemattomia nimiä. Kuten kuvasta näkyy, Nimikalliolta oli aikanaan upeat näkymät Pyhäjärvelle ja sen ympäristöön. Nykyään nämä maisemat ovat osittain jääneet puiden taakse, mutta paikan kiehtova historia tekee siitä silti ainutlaatuisen.",
+    "location": {
+      "lat": 61.4951,
+      "lon": 23.7266
+    },
+    "source": "Tampereen Museot",
+    "degree": 244,
+    "url": "https://pkp-backend.fly.dev/images/1.webp",
+    "year": "1902",
+    "photographer": "J. S. Sirén",
+    "pack": "6762b150ce7a962c80a9a822"
+  },
+  {
+    "title_en": "Pyynikki Beach",
+    "title_fi": "Pyynikin uimaranta",
+    "description_en": "Pyynikki Beach has been a beloved retreat for Tampere locals since its public opening in 1931. Nestled between the rocky Jalkasaari and Joselininniemi, the beach quickly became a hotspot for sunbathers and swimmers alike. Its shallow sandy shores and expansive green areas offered the perfect escape just minutes from the city center.\n\nThroughout the decades, the beach has seen its fair share of history. A wooden water slide once graced Jalkasaari’s cliffs in the mid-20th century, and the iconic Rosendahl Restaurant stood proudly nearby until 1968, serving as a gathering place for locals and visitors. Following the closure of the restaurant, a modern congress hotel—Scandic Rosendahl—took its place in 1977, inaugurated by none other than President Urho Kekkonen.\n\nHowever, not all years were smooth sailing for the beach. In 1970, it was deemed unsuitable for swimming and remained closed for seven years. Thankfully, it reopened, reclaiming its spot as one of Tampere's most cherished outdoor destinations. Today, Pyynikki Beach continues to welcome visitors with its family-friendly amenities, lush surroundings, and a touch of history in every corner.",
+    "description_fi": "Pyynikin uimaranta on ollut tamperelaisten suosima virkistyspaikka vuodesta 1931 lähtien. Jalkasaaren kallioiden ja Joselininniemen välissä sijaitseva uimaranta hurmaa niin auringonpalvojat kuin uimaritkin matalilla hiekkarannoillaan ja laajoilla nurmialueillaan.\n\nVuosikymmenten aikana ranta on nähnyt monenlaista historiaa. Jalkasaaren kallioilla oli 1900-luvun puolivälissä puinen vesikelkkamäki, ja rannalla sijainnut ikoninen Rosendahlin ravintola toimi suosittuna kokoontumispaikkana aina vuoteen 1968 asti. Ravintolan sulkemisen jälkeen sen paikalle nousi moderni kongressihotelli Scandic Rosendahl, jonka presidentti Urho Kekkonen vihki käyttöön vuonna 1977.\n\nKaikki vuodet eivät kuitenkaan ole olleet suosiollisia. Vuonna 1970 ranta suljettiin uimakelvottomana ja pysyi kiinni seitsemän vuotta. Onneksi se avattiin jälleen, ja se onkin palauttanut asemansa yhtenä Tampereen rakastetuimmista ulkoilukohteista. Nykyään Pyynikin uimaranta tarjoaa perheystävällisiä palveluita, vehreää ympäristöä ja historian havinaa jokaisessa nurkassa.",
+    "location": {
+      "lat": 61.4911,
+      "lon": 23.736
+    },
+    "source": "Tampereen Museot",
+    "degree": 280,
+    "url": "https://pkp-backend.fly.dev/images/2.webp",
+    "year": "1956",
+    "photographer": "E. M. Staf",
+    "pack": "6762b150ce7a962c80a9a822"
+  },
+  {
+    "title_en": "Pyynikin Trikoo",
+    "title_fi": "Pyynikin Trikoo",
+    "description_en": "Once a cornerstone of Finland’s textile industry, Pyynikin Trikoo represents an era of craftsmanship and innovation in Tampere. Founded in 1903 by Alfred Kordelin, a self-made businessman, the factory started with the production of socks and athletic shirts. Over the decades, it expanded into a diverse range of clothing, from swimsuits to business attire, making it a household name in Finland.\n\nDuring the wars, the factory shifted its focus to military needs, producing socks and underwear for soldiers. Despite challenges like material shortages and bombings during the Winter War, the factory persevered and remained a symbol of resilience. By the 1950s, Pyynikin Trikoo was at its peak, employing over 2,400 workers and producing nearly half of Finland's tricot products.\n\nThe factory complex itself is a masterpiece of industrial architecture, with its classicist facades designed by Birger Federley and later functionalist expansions by Veikko Kallio. The terraced buildings descending toward the lake create a unique blend of industrial functionality and aesthetic charm.\n\nThough its industrial operations ceased long ago, the site has found new life as a hub for small businesses, artists, and craftspeople. Today, Pyynikin Trikoo stands as a monument to Tampere’s rich industrial heritage, with restoration projects ensuring its story continues for future generations.",
+    "description_fi": "Pyynikin Trikoo oli aikoinaan Suomen tekstiiliteollisuuden kulmakivi ja edusti käsityön sekä innovaatioiden aikakautta Tampereella. Vuonna 1903 Alfred Kordelinin perustama tehdas aloitti sukkien ja urheilupaitojen valmistuksella. Vuosikymmenten aikana tuotanto laajeni kattamaan monipuolisen valikoiman vaatteita uimapuvuista toimistopukuihin, tehden Pyynikin Trikoosta tunnetun nimen Suomessa.\n\nSotien aikana tehdas keskittyi armeijan tarpeisiin, valmistamalla sukkia ja alusvaatteita sotilaille. Talvisodan pommituksista ja materiaalipulasta huolimatta tehdas säilyi toiminnassa ja symboloi sitkeyttä. 1950-luvulla Pyynikin Trikoo oli huipussaan, työllistäen yli 2 400 henkilöä ja tuottaen lähes puolet Suomen trikootuotteista.\n\nTehdasalue itsessään on teollisuusarkkitehtuurin mestariteos, jonka klassistiset julkisivut suunnitteli Birger Federley ja myöhemmät funktionalistiset laajennukset Veikko Kallio. Harjulta järvelle laskeutuvat terassimaiset rakennukset yhdistävät käytännöllisyyden ja esteettisen viehätyksen ainutlaatuisella tavalla.\n\nVaikka tehdastoiminta on päättynyt, alue on löytänyt uuden elämän pienyritysten, taiteilijoiden ja käsityöläisten keskuksena. Nykyään Pyynikin Trikoo seisoo Tampereen rikkaan teollisuusperinnön muistomerkkinä, ja kunnostushankkeet varmistavat, että sen tarina jatkuu myös tuleville sukupolville.",
+    "location": {
+      "lat": 61.4946,
+      "lon": 23.7223
+    },
+    "source": "Tampereen Museot",
+    "degree": 133,
+    "url": "https://pkp-backend.fly.dev/images/3.webp",
+    "year": "1939-1949",
+    "photographer": "E. A. Bergius",
+    "pack": "6762b150ce7a962c80a9a822"
+  },
+  {
+    "title_en": "Pispalan valtatie",
+    "title_fi": "Pispalan valtatie",
+    "description_en": "Pispalan valtatie is more than just a road; it’s a gateway to the rich history and culture of Pispala, a unique district nestled between two lakes. The name \"Pispala\" traces back to the Pispan house, once tasked with housing the bishop during his travels. What began as a quiet area with two farms in the 19th century transformed into a bustling community of factory workers, carpenters, and artists by the 20th century.\n\nIn the late 1930s, the road underwent significant upgrades, including the construction of a supporting wall along the Näsijärvi side to widen the path. This expansion, however, came at a cost—several homes were relocated or demolished. Today, remnants of Pispalan valtatie’s transformation still shape its character.\n\nThe road has its darker moments, too, such as the infamous 1885 murder of Ernst von Nottbeck, a member of the prominent Finlayson family, which shocked Tampere and remains shrouded in mystery.\n\nPispalan valtatie is also home to beloved landmarks, like Vaakon Nakki, a legendary grill that has served hungry visitors since 1962, and Rajaportti Sauna, Finland’s oldest public sauna, offering timeless relaxation since 1906.\n\nThe road and its surroundings have inspired countless works of art and literature, from Lauri Viita’s \"Moreeni\" to Tapio Rautavaara’s songs. Whether exploring its wooden houses or enjoying a snack at Vaakon Nakki, Pispalan valtatie invites you to experience its vibrant, evolving story.",
+    "description_fi": "Pispalan valtatie on muutakin kuin pelkkä tie; se toimii porttina Pispalan rikkaaseen historiaan ja kulttuuriin, kahden järven väliin sijoittuvassa ainutlaatuisessa kaupunginosassa. Pispala on saanut nimensä Pispan talosta, joka tarjosi aikoinaan majoitusta piispalle tämän matkojen aikana. 1800-luvulla alueella oli vain kaksi maatilaa, mutta 1900-luvulla se kehittyi vilkkaaksi tehdastyöläisten, kirvesmiesten ja taiteilijoiden yhteisöksi.\n\n1930-luvun lopulla Pispalan valtatie koki merkittäviä parannuksia. Tien leventämiseksi rakennettiin tukimuuri Näsijärven puolelle, mikä kuitenkin johti useiden talojen siirtämiseen tai purkamiseen. Nämä muutokset näkyvät katukuvassa nykyäänkin.\n\nTiellä on koettu myös synkempiä hetkiä, kuten Finlaysonin mahtisuvun jäsenen Ernst von Nottbeckin mysteeriksi jäänyt murha vuonna 1885, joka järkytti Tamperetta ja koko Suomea.\n\nPispalan valtatiellä sijaitsee myös useita tunnettuja maamerkkejä, kuten Vaakon Nakki, legendaarinen grilli, joka on tarjonnut herkkuja ohikulkijoille jo vuodesta 1962, ja Rajaportin sauna, Suomen vanhin julkinen sauna, joka on lämmennyt peräti vuodesta 1906.\n\nPispalan valtatie ja sen ympäristö ovat inspiroineet myös taidetta, kuten Lauri Viidan romaanin \"Moreeni\" ja Tapio Rautavaaran laulut. Oli kyseessä sitten kävely puutaloalueella tai pysähdys Vaakon Nakilla, Pispalan valtatie kutsuu tutustumaan kaupunginosan elävään, alati kehittyvään tarinaan.",
+    "location": {
+      "lat": 61.5026,
+      "lon": 23.7191
+    },
+    "source": "Tampereen Museot",
+    "degree": 106,
+    "url": "https://pkp-backend.fly.dev/images/7.webp",
+    "year": "1930-1939",
+    "photographer": "V. O. Kanninen",
+    "pack": "6762b150ce7a962c80a9a822"
+  },
+  {
+    "title_en": "Field of Thermopylae",
+    "title_fi": "Termopyleen kenttä",
+    "description_en": "Termopyleen kenttä, or the Field of Thermopylae, is a culturally and historically significant area nestled between the Pyynikki Ridge and the shores of Pyhäjärvi. Its name draws inspiration from the ancient Thermopylae pass in Greece, though the scale here is far more modest. Nearby, Termopyleen sola became a vital passageway as early as the 19th century, with steps carved into the rock to aid movement.\n\nSince the 1880s, Termopyleen kenttä has been the site of numerous events, ranging from educational society celebrations to socialist May Day rallies. In 1945, the post-war May Day gathering drew a crowd of 25,000 people. During the Finnish Civil War, the field served as a temporary burial site for fallen soldiers before they were relocated to Kalevankangas Cemetery.\n\nToday, visitors can still spot the remnants of a stage built in 1962, a reminder of the lively celebrations once held here. A unique feature of the field is “Herra Kivi” (Mr. Stone), a mysterious granite rock located near the fitness equipment. Local lore dictates that Mr. Stone must be turned to face the athletic performance – otherwise, it never happened.",
+    "description_fi": "Termopyleen kenttä on Pyynikinharjun ja Pyhäjärven välissä sijaitseva kulttuurihistoriallinen alue, joka tunnetaan värikkäästä historiastaan. Sen nimi on saanut inspiraationsa antiikin Kreikan Thermopylain solasta, vaikka alueen mittasuhteet ovat huomattavasti vaatimattomammat. Läheinen Termopyleen sola toimi tärkeänä kulkureittinä jo 1800-luvulta alkaen, ja kulkua helpottamaan kallioon hakattiin portaat.\n\n1880-luvulta lähtien Termopyleen kenttä on ollut monien tapahtumien näyttämönä, aina Kansanvalistusseuran juhlista sosialidemokraattien vappujuhliin. Vuoden 1945 vappujuhlassa alueelle kokoontui peräti 25 000 ihmistä. Suomen sisällissodan aikana kenttä toimi kaatuneiden tilapäisenä hautapaikkana, kunnes vainajat siirrettiin Kalevankankaan hautausmaalle.\n\nNykyään alueella voi yhä nähdä vuonna 1962 rakennetun laululavan jäänteitä, jotka kertovat menneistä juhlista ja tapahtumista. Kentän erikoisuus on ”Herra Kivi”, arvoituksellinen graniittikivi, joka löytyy liikuntatelineiden laidalta. Sanotaan, että Herra Kivi tulee kääntää seuraamaan urheilusuoritusta - tai sitä ei tapahtunut.",
+    "location": {
+      "lat": 61.495825,
+      "lon": 23.728064
+    },
+    "source": "Tampereen Museot",
+    "degree": 0,
+    "url": "https://pkp-backend.fly.dev/images/10.webp",
+    "year": "1937",
+    "photographer": "E. M. Staf",
+    "pack": "6762b150ce7a962c80a9a822"
+  },
+  {
+    "title_en": "Pyynikki TT",
+    "title_fi": "Pyynikinajo",
+    "description_en": "Pyynikinajo was a TT motorcycle racing event held in Pyynikki, Tampere, from 1932 to 1939 and again from 1946 to 1971, for a total of 34 races. The competition was paused during the war years from 1940 to 1945. The peak of Pyynikinajo came in 1962 and 1963 when the track hosted World Championship races. Renowned riders such as Mike Hailwood and Jim Redman graced the event, along with Finnish legend Raine Lampinen, who participated 19 times and claimed five victories in the 500cc class.\n\nPyynikinajo attracted over 560,000 spectators in total. Despite the electrifying atmosphere, the track was infamous for its dangers. Over the years, three riders lost their lives, and the races were banned in 1971 due to safety concerns. The final race featured future world champion Jarno Saarinen, who achieved a double victory.\n\nPyynikinajo remains a cherished memory, and commemorative rides have been held in 1991, 2000, 2015, and 2018. During these events, vintage race bikes circle the track in exhibition laps, reviving the spirit of this legendary competition.",
+    "description_fi": "Pyynikinajo oli Tampereen Pyynikillä ajettu TT-moottoripyöräkilpailu, joka järjestettiin vuosina 1932–1939 ja 1946–1971 yhteensä 34 kertaa. Sotavuosina 1940–1945 kilpailut olivat tauolla. Pyynikinajojen huippuhetket koettiin vuosina 1962 ja 1963, jolloin rata isännöi MM-osakilpailuja. Kilpailuissa nähtiin kansainvälisiä huippukuljettajia, kuten Mike Hailwood ja Jim Redman, sekä kotimainen legenda Raine Lampinen, joka osallistui ajoihin 19 kertaa ja voitti viidesti 500-kuutioisten luokan.\n\nPyynikinajot keräsivät yhteensä yli 560 000 katsojaa. Eloisasta tunnelmasta huolimatta rata tunnettiin vaarallisena. Pyynikinajoissa kuoli historian saatossa kolme kuljettajaa, ja kilpailut kiellettiin turvallisuussyistä vuonna 1971. Viimeisessä kisassa nähtiin tuleva maailmanmestari Jarno Saarinen, joka otti tuplavoiton.\n\nKilpailuja muistetaan yhä lämmöllä ja Pyynikillä onkin järjestetty muistoajoja vuosina 1991, 2000, 2015 ja 2018. Muistoajoissa vanhat kilpapyörät kiertävät rataa näytösluonteisesti, herättäen henkiin menneiden aikojen tunnelmaa.",
+    "location": {
+      "lat": 61.4942,
+      "lon": 23.716
+    },
+    "source": "Tampereen Museot",
+    "degree": 77,
+    "url": "https://pkp-backend.fly.dev/images/11.webp",
+    "year": "1939",
+    "photographer": "E. M. Staf",
+    "pack": "6762b150ce7a962c80a9a822"
+  },  
+  {
+    "title_en": "Koulukatu Rink",
+    "title_fi": "Koulukadun kenttä",
+    "description_en": "Koulukatu Rink, located in the Kaakinmaa district of Tampere, is Finland's first artificial ice rink, constructed in 1956. Originally, the site housed three tennis courts belonging to the Tampere Tennis Club, which Ilves repurposed for ice hockey in 1934, creating a makeshift rink with minimal facilities. By 1945, a proper rink with high boards and spectator stands was built, paving the way for professional ice hockey matches.\n\nThe artificial ice rink, completed in 1956, marked a turning point for Finnish ice hockey. The project was a collaboration between the city of Tampere, local hockey players, and the Pyynikki beverage factory. In the inaugural match, Ilves' Hakimsan scored the opening goal against Koovee.\n\nKoulukatu Rink also held international significance. The Canadian and Soviet national teams played there, drawing crowds of over 10,000 spectators. It holds the SM-sarja attendance record of 10,655 fans from a 1964 match between Tappara and TK-V.\n\nAfter the construction of Hakametsä Ice Hall in 1965, Koulukatu became a venue for lower-league teams and public skating. Today, it is primarily used for recreational skating and school activities. The rink's legacy includes the term \"ylämummo,\" referring to the top-left corner of the Pyhäjärvi-side goal, a name derived from the nearby De Gamlas Hem retirement home.",
+    "description_fi": "Koulukadun kenttä, joka sijaitsee Tampereen Kaakinmaalla, on Suomen ensimmäinen tekojäärata. Se rakennettiin vuonna 1956. Alkujaan paikalla oli kolme Tampereen Tennisseuran tenniskenttää, jotka Ilves jäädytti jääkiekkoharjoituksia ja -otteluita varten vuonna 1934. Vuonna 1945 paikalle rakennettiin korkealaitainen kaukalo ja katsomo, mikä mahdollisti ammattimaisemmat ottelut.\n\nVuonna 1956 valmistunut tekojäärata merkitsi käännekohtaa suomalaiselle jääkiekolle. Tampereen kaupunki, paikalliset jääkiekkoilijat ja Pyynikin virvoitusjuomatehdas yhdessä toteuttivat hankkeen, jonka ensimmäisessä ottelussa Ilveksen Hakimsan teki avausmaalin Kooveeta vastaan.\n\nKoulukadun kenttä oli tärkeä myös kansainvälisesti. Kanadan ja Neuvostoliiton maajoukkueet vierailivat kentällä, keräten katsomoihin yli 10 000 katsojaa. Kenttä pitää hallussaan SM-sarjan yleisöennätystä vuodelta 1964, jolloin Tappara ja TK-V kohtasivat 10 655 katsojan edessä.\n\nHakametsän jäähallin valmistumisen jälkeen vuonna 1965 Koulukadulle jäivät alemmilla sarjatasoilla pelaavat joukkueet. Nykyään kenttä on pääasiassa yleisöluistelussa ja koulujen käytössä. Kentällä syntyi myös termi \"ylämummo,\" joka viittaa Pyhäjärven puoleisen maalin ylänurkkaan. Tämä nimitys sai alkunsa viereisestä De Gamlas Hem -vanhainkodista.",
+    "location": {
+      "lat": 61.4924,
+      "lon": 23.7479
+    },
+    "source": "Tampereen Museot",
+    "degree": 338,
+    "url": "https://pkp-backend.fly.dev/images/15.webp",
+    "year": "1963",
+    "photographer": "V. Lintinen",
+    "pack": "6762b150ce7a962c80a9a822"
+  },
+  {
+    "title_en": "Näsihalli",
+    "title_fi": "Näsihalli",
+    "description_en": "Näsihalli, located at the intersection of Pirkankatu and Vesilinnantie, is Tampere's oldest indoor tennis hall. Designed by architect Bertel Strömmer, it was completed in late 1937. The wooden structure features a tennis court under an arched roof, while the ground floor originally housed bowling lanes and the caretaker's apartment.\n\nWorld War II interrupted operations after just over a year, but post-war, the hall became bustling again with tennis and bowling enthusiasts as well as competitions. In 1955, Näsihalli served as an exhibition space during Tampere trade fairs, showcasing products from the fashion industry. In the 1960s, the bowling lanes were removed, and the space was rented first to the Invalids' Work Support Association and later to Sopimusvuori.\n\nIn 1985, the hall was significantly expanded and renamed Kiinteistö Oy Näsihalli. Despite its transformations, Näsihalli remains a popular venue for tennis enthusiasts and stands as a vital piece of Tampere's sports and architectural history.",
+    "description_fi": "Näsihalli, joka sijaitsee Pirkankadun ja Vesilinnantien risteyksessä, on Tampereen vanhin sisätennishalli. Se valmistui vuoden 1937 lopulla arkkitehti Bertel Strömmerin suunnittelemana. Puurakenteisen hallin kaarikaton alle rakennettiin tenniskenttä, ja alakertaan sijoitettiin keilaradat sekä vahtimestarin asunto.\n\nToinen maailmansota keskeytti hallin toiminnan vain runsaan vuoden jälkeen, mutta sodan jälkeen se täyttyi jälleen tenniksen ja keilailun harrastajista sekä kilpailuista. Vuonna 1955 Näsihalli toimi Tampereen messujen näyttelytilana esitellen muotiteollisuuden tuotteita. 1960-luvulla keilaradat purettiin, ja tilalle vuokralaiseksi tuli ensin Invalidien Työtuki ja myöhemmin Sopimusvuori.\n\nVuonna 1985 hallia laajennettiin merkittävästi ja se sai nimekseen Kiinteistö Oy Näsihalli. Huolimatta muutoksista Näsihalli on yhä suosittu tenniksharrastajien keskuudessa, ja se edustaa tärkeää osaa Tampereen urheilu- ja rakennushistoriaa.",
+    "location": {
+      "lat": 61.4987,
+      "lon": 23.7311
+    },
+    "source": "Tampereen Museot",
+    "degree": 285,
+    "url": "https://pkp-backend.fly.dev/images/5.webp",
+    "year": "1938",
+    "photographer": "V. Kanninen",
+    "pack": "6762b150ce7a962c80a9a822"
+  },
+  {
+    "title_en": "Heinätori",
+    "title_fi": "Heinätori",
+    "description_en": "Heinätori, now called Pyynikintori, was once a bustling marketplace for hay and straw. Officially named in 1907, the square was lively with farmers selling hay and animals like pigs and cows. It wasn’t just about commerce; it was a place to catch up with friends and observe city life.\n\nThe square also hosted sports competitions, circuses, and fairs. Its history includes moments like Hannes Kivistö’s javelin world record. By the 1930s, the area began to urbanize with cobblestone paving, and the square’s commercial role diminished.\n\nToday, Pyynikintori serves mainly as a parking area, but its past lives on in landmarks like Restaurant Heinätori. Renovated from the old weigh house, this charming restaurant brings a slice of history into the present day.",
+    "description_fi": "Heinätori, nykyiseltä nimeltään Pyynikintori, tunnettiin aikoinaan vilkkaana heinän ja olkien kauppapaikkana. Vuonna 1907 virallisesti nimetty tori oli täynnä elämää, kun maaseudun isännät myivät heinää ja eläimiä, kuten sikoja ja lehmiä. Torilla ei käyty pelkästään kauppaa, vaan se oli myös paikka, jossa vaihdettiin kuulumisia ja seurattiin kaupungin menoa.\n\nTorilla järjestettiin myös urheilukilpailuja, sirkuksia ja markkinoita. Alueen historiaan kuuluu muun muassa Hannes Kivistön keihäänheiton maailmanennätys. 1930-luvulle tultaessa ympäristö alkoi kaupungistua, kadut päällystettiin mukulakivillä ja torin kaupallinen merkitys väheni.\n\nNykyään Pyynikintori toimii lähinnä pysäköintialueena, mutta menneisyys näkyy yhä esimerkiksi Ravintola Heinätorissa. Vanhaan vaakahuoneeseen kunnostettu tunnelmallinen ravintola tuo ripauksen historiaa takaisin nykypäivään.",
+    "location": {
+      "lat": 61.4976,
+      "lon": 23.7413
+    },
+    "source": "Tampereen Museot",
+    "degree": 248,
+    "url": "https://pkp-backend.fly.dev/images/6.webp",
+    "year": "1931",
+    "photographer": "",
+    "pack": "6762b150ce7a962c80a9a822"
+  },
+  {
+    "title_en": "Pyynikintie 2",
+    "title_fi": "Pyynikintie 2",
+    "description_en": "Pyynikintie 2, also known as Vanha Teku, was completed in 1915 and initially housed the Tampere Technical School. The building was designed by Richard Björnberg, with a 1930s extension by Hjalmar Åberg. The school later merged with the industrial school to form Tampere Polytechnic, which relocated to Kauppi in the 1960s.\n\nDuring the Finnish Civil War, the building served as the headquarters of the Reds’ northern front. A grenade explosion in March 1918 killed their commander-in-chief Hugo Salmela and several others, leading to the evacuation of the headquarters. The photo shows the building after the Civil War bombings, which caused significant damage. Over the years, the building has also hosted university and vocational school functions.\n\nRenovated between 2021 and 2023, the building now accommodates Hatanpää High School and other educational activities. Pyynikintie 2 is part of a nationally significant cultural environment and remains a key piece of local history.",
+    "description_fi": "Pyynikintie 2, joka tunnetaan myös nimellä Vanha Teku, otettiin käyttöön vuonna 1915 ja toimi alun perin Tampereen teknillisenä opistona. Rakennuksen ensimmäisen vaiheen suunnitteli Richard Björnberg, ja 1930-luvun laajennuksesta vastasi Hjalmar Åberg. Opisto yhdistettiin myöhemmin teollisuuskoulun kanssa Tampereen teknilliseksi oppilaitokseksi, joka siirtyi Kauppiin 1960-luvulla.\n\nSisällissodan aikana rakennus toimi punaisten pohjoisrintaman esikuntana. Maaliskuussa 1918 sattunut käsikranaattiräjähdys tappoi ylipäällikkö Hugo Salmelan ja useita muita, mikä johti punaisten esikunnan siirtymiseen. Kuvassa näkyy rakennus kuvattuna sisällissodan pommitusten jälkeen, jotka vaurioittivat sitä merkittävästi. Talo on kokenut historiansa aikana monia vaiheita ja toiminut myöhemmin myös yliopiston ja ammattiopiston tiloina.\n\nPeruskorjaus vuosina 2021–2023 valmisti rakennuksen uudelleen opetuskäyttöön, ja se isännöi Hatanpään lukiota sekä perusopetuksen toimintoja. Pyynikintie 2 on osa valtakunnallisesti merkittävää kulttuuriympäristöä ja tärkeä osa kaupungin historiaa.",
+    "location": {
+      "lat": 61.4945,
+      "lon": 23.7442
+    },
+    "source": "Tampereen Museot",
+    "degree": 256,
+    "url": "https://pkp-backend.fly.dev/images/14.webp",
+    "year": "1918",
+    "photographer": "Atelier Laurent",
+    "pack": "6762b150ce7a962c80a9a822"
+  },
+  {
+    "title_en": "Palomäen Swimming Facility",
+    "title_fi": "Palomäen uimalaitos",
+    "description_en": "Palomäki swimming facility, located at the southern end of Koulukatu by Lake Pyhäjärvi, was a beloved swimming facility that operated from 1908 to 1962. Initially, the facility had separate areas for men and women, divided by a tall fence, though the sections were later combined. The swimming area featured 14 dressing cabins and a 7.5-meter-high diving tower, making it a popular spot for competitions and shows, including fire-diving performances and synchronized swimming exhibitions.\n\nThe Tampere Swimming Club and the Workers’ Swimmers managed the facility from 1925, alternating responsibilities. By the late 1950s, usage declined due to the construction of Pyynikki's indoor swimming hall in 1957 and concerns about water quality in Pyhäjärvi. The facility was ultimately demolished in 1963.\n\nToday, a memorial stone, unveiled in 2004, marks the location, preserving the memories of summers filled with swimming, friendships, and competitions that many Tampere residents hold dear.",
+    "description_fi": "Palomäen uimalaitos sijaitsi Pyhäjärven rannalla Koulukadun eteläpäässä ja toimi kaupunkilaisten uimapaikkana vuosina 1908–1962. Alkuun uimalaitoksessa oli erilliset osastot miehille ja naisille, jotka yhdistettiin myöhemmin. Alueella oli 14 pukukoppia ja 7,5 metriä korkea hyppytorni, ja siellä järjestettiin kilpailuja ja näytöksiä, kuten tulisukelluksia ja kuviokelluntaa.\n\nTampereen Uimaseura ja Työväen Uimarit hoitivat uimalaitosta vuorotellen vuodesta 1925 lähtien. 1950-luvun loppuun mennessä käyttö väheni Pyynikin uimahallin valmistumisen (1957) ja Pyhäjärven heikentyneen vedenlaadun vuoksi. Lopulta uimalaitos purettiin vuonna 1963.\n\nNykyään paikalla on vuonna 2004 paljastettu muistokivi, joka säilyttää muiston kesistä täynnä uimaretkiä, jotka ovat monelle tamperelaiselle rakkaita.",
+    "location": {
+      "lat": 61.4910,
+      "lon": 23.7470
+    },
+    "source": "Tampereen Museot",
+    "degree": 309,
+    "url": "https://pkp-backend.fly.dev/images/16.webp",
+    "year": "1940-1959",
+    "photographer": "V. Kanninen",
+    "pack": "6762b150ce7a962c80a9a822"
+  },
+  {
+    "title_en": "Pyynikki Matchstick Factory",
+    "title_fi": "Pyynikin tulitikkutehdas",
+    "description_en": "Pyynikki Matchstick Factory operated on the shores of Lake Pyhäjärvi from 1856 to 1908. It was the second matchstick factory in the city, established by merchant Akseli Selim Laurén. At its peak, the factory produced over 30 million matchboxes annually, earning recognition both domestically and internationally. However, working conditions were hazardous, with white phosphorus causing severe health issues for workers, including facial necrosis. Finland was the first country in the world to ban the use of white phosphorus in match production in 1872.\n\nThe factory frequently experienced fires, necessitating repeated repairs. In the late 19th century, the factory was modernized to improve fire safety. However, operations ceased in 1908, and the factory was demolished by 1910. Today, remnants of the factory’s concrete foundations can still be seen near Pyynikki beach, serving as a reminder of the area's industrial past.",
+    "description_fi": "Pyynikin tulitikkutehdas toimi Pyhäjärven rannalla vuosina 1856–1908 ja oli Tampereen toinen tulitikkutehdas, jonka perusti kauppias Akseli Selim Laurén. Tehdas saavutti huippunsa 1900-luvun alussa, tuottaen yli 30 miljoonaa tulitikkurasiaa vuodessa ja saavuttaen mainetta niin kotimaassa kuin kansainvälisestikin. Työolot olivat kuitenkin vaaralliset, ja valkoisen fosforin käyttö aiheutti työntekijöille vakavia terveysongelmia, kuten kasvojen kuolioita. Suomessa kiellettiin ensimmäisenä maailmassa valkoisen fosforin käyttö tulitikkujen valmistuksessa vuonna 1872.\n\nTehtaalla sattui usein tulipaloja, ja rakennuksia jouduttiin korjaamaan toistuvasti. 1800-luvun lopulla tehdasta uudistettiin tulipaloturvallisuuden parantamiseksi. Toiminta kuitenkin päättyi vuonna 1908, ja tehdas purettiin vuoteen 1910 mennessä. Tehtaan betoniperustukset ovat yhä nähtävissä Pyynikin uimarannan läheisyydessä, muistuttaen alueen teollisesta menneisyydestä.",
+    "location": {
+      "lat": 61.4907,
+      "lon": 23.7308
+    },
+    "source": "Tampereen Museot",
+    "degree": 90,
+    "url": "https://pkp-backend.fly.dev/images/17.webp",
+    "year": "1900-1909",
+    "photographer": "",
+    "pack": "6762b150ce7a962c80a9a822"
+  },
+  {
+    "title_en": "Kilometer House",
+    "title_fi": "Kilometritalo",
+    "description_en": "The kilometer house, located at Pirkankatu 29–35, is a 138-meter-long log-constructed residential building in Pyynikinrinne. Completed in 1923 and designed by Heikki Tiitola, it represents 1920s classicism. Originally, the site was planned for two separate buildings, but Tiitola proposed a unified structure for architectural harmony, creating this unique and historically significant landmark.\n\nKilometritalo was built to alleviate housing shortages for the working class, offering appropriately sized small apartments. The two-story building is considered by its residents to be the world's longest log house. It is protected for its architectural and historical value.\n\nIn 1928, two additional buildings designed by Bertel Strömmer were constructed next to Kilometritalo. These structures feature distinctive south-facing balcony porches overlooking Pyynikki. They complement the 1920s architectural style of the area and add to Pyynikinrinne's historical charm.",
+    "description_fi": "Kilometritalo, joka sijaitsee osoitteessa Pirkankatu 29–35, on 138 metriä pitkä hirsirakenteinen asuinrakennus Pyynikinrinteellä. Vuonna 1923 valmistuneen talon suunnitteli Heikki Tiitola, ja se edustaa 1920-luvun klassismia. Alun perin tontille oli suunniteltu kaksi erillistä taloa, mutta Tiitola ehdotti yhtenäistä rakennusriviä rakennustaiteellisen harmonian saavuttamiseksi, mikä johti tämän ainutlaatuisen ja historiallisesti merkittävän kohteen syntyyn.\n\nKilometritalo rakennettiin lievittämään työväestön asuntopulaa ja tarjoamalla sopivan kokoisia pienasuntoja. Kaksikerroksinen rakennus on asukkaidensa mukaan maailman pisin hirsitalo. Rakennus on suojeltu sen arkkitehtonisen ja historiallisen arvon vuoksi.\n\nKilometritalon viereen rakennettiin vuonna 1928 Bertel Strömmerin suunnittelemat kaksi muuta rakennusta, jotka sisältävät omaleimaiset etelään Pyynikille suuntautuvat parvekekuistit. Nämä rakennukset täydentävät alueen 1920-luvun arkkitehtonista ilmettä ja lisäävät Pyynikinrinteen historialliseen viehätykseen.",
+    "location": {
+      "lat": 61.4989,
+      "lon": 23.7278
+    },
+    "source": "Tampereen Museot",
+    "degree": 121,
+    "url": "https://pkp-backend.fly.dev/images/18.webp",
+    "year": "1923",
+    "photographer": "",
+    "pack": "6762b150ce7a962c80a9a822"
+  },
+  {
+    "title_en": "Pyynikki Summer Theatre",
+    "title_fi": "Pyynikin kesäteatteri",
+    "description_en": "Pyynikki Summer Theatre is renowned for its rotating auditorium and is one of Finland's largest and longest-running open-air theatres. It was founded in 1948 by actors Yrjö Kostermaa and Toivo Mäkelä under the name Tampereen Kesäteatteri. Located by Lake Pyhäjärvi in Joselininniemi, it was renamed Pyynikin kesäteatteri in 1955 when Tampereen Teatterikerho (Tampere Theatre Club) took over operations.\n\nThe iconic rotating auditorium, designed by architect Reijo Ojanen, was completed in 1959, initially seating 800 spectators. It was the first of its kind globally and has been updated over the years to accommodate 821 seats. The theatre achieved immense success with Väinö Linna's 'The Unknown Soldier,' directed by Edvin Laine, which premiered in 1961 and ran for nine summers, attracting nearly 350,000 viewers.\n\nIn 2001, the theatre was transformed into a foundation to secure its operations, and in 2023 it became a limited company equally owned by Tampereen Teatteri, Tampereen Työväen Teatteri (Tampere Workers' Theatre), and Eino Salmelaisen säätiö. With over 3 million visitors throughout its history, Pyynikki Summer Theatre remains a cherished cultural landmark.",
+    "description_fi": "Pyynikin kesäteatteri tunnetaan pyörivästä katsomostaan, ja se on yksi Suomen suurimmista ja pisimpään yhtäjaksoisesti toimineista ulkoilmateattereista. Sen perustivat vuonna 1948 näyttelijät Yrjö Kostermaa ja Toivo Mäkelä Tampereen Kesäteatteri -nimisenä. Pyhäjärven rannalla, Joselininniemessä sijaitseva teatteri sai nykyisen nimensä vuonna 1955, kun Tampereen Teatterikerho otti toiminnan vastuulleen.\n\nArkkitehti Reijo Ojasen suunnittelema ikoninen pyörivä katsomo valmistui vuonna 1959 ja tarjosi aluksi paikat 800 katsojalle. Se oli ensimmäinen laatuaan maailmassa, ja sitä on päivitetty vuosien varrella nykyiseen 821 paikkaan. Teatteri saavutti valtavan menestyksen Väinö Linnan 'Tuntematon sotilas' -teoksen sovituksella, jonka ohjasi Edvin Laine. Näytelmä sai ensi-iltansa vuonna 1961 ja pysyi ohjelmistossa yhdeksän kesän ajan keräten lähes 350 000 katsojaa.\n\nVuonna 2001 teatteri muutettiin säätiöksi toiminnan turvaamiseksi, ja vuonna 2023 siitä tuli osakeyhtiö, jonka omistavat yhtä suurin osuuksin Tampereen Teatteri, Tampereen Työväen Teatteri ja Eino Salmelaisen säätiö. Yli 3 miljoonalla katsojallaan Pyynikin kesäteatteri on merkittävä kulttuurinen maamerkki ja arvostettu osa Tampereen historiaa.",
+    "location": {
+        "lat": 61.4914,
+        "lon": 23.7381
+    },
+    "source": "Tampereen Museot",
+    "degree": 200,
+    "url": "https://pkp-backend.fly.dev/images/19.webp",
+    "year": "1959",
+    "photographer": "J. Riekkola",
+    "pack": "6762b150ce7a962c80a9a822"
+},
+{
+    "title_en": "Bishop's House",
+    "title_fi": "Piispantalo",
+    "description_en": "The Bishop’s House, located on the slopes of Pyynikinharju, serves as the residence for the bishop and their family, as well as an official venue for meetings, events, and chapter sessions of the Diocese of Tampere. Constructed in 1937 and inaugurated on June 2, 1938, it is Finland's largest bishop's residence. The three-story functionalist-style building was designed by architect Gunnar Wahlroos.\n\nSet on a steep hillside overlooking Lake Pyhäjärvi, the house’s main floor features the entrance, reception rooms, library, study, and a chapel. The top floor houses the private living quarters for the bishop and their family, while the ground floor contains the caretaker's apartment and technical facilities.\n\nThe building is part of the nationally significant built cultural environment of Pyynikinrinne and is protected for its architectural, cultural, and landscape value. Key artistic features include a relief, 'Pilgrims' (1938), above the main entrance by sculptor Aarre Aaltonen, and murals by Anna Lena Huss, sister of the architect. While many murals were covered during the 1966 renovation, some original features remain.\n\nWahlroos’s design reflects a transitional period in his architecture, blending functionalism with subtle elements of classicism, evident in details like arch motifs on doors and windows. His other notable works include the Turku Martti Church and Schauman Castle in Jyväskylä.",
+    "description_fi": "Piispantalo, joka sijaitsee Pyynikinharjun rinteellä, toimii Tampereen hiippakunnan piispan ja hänen perheensä kotina sekä edustustilana, jossa järjestetään kokouksia, tapahtumia ja tuomiokapitulin istuntoja. Vuonna 1937 rakennettu ja 2. kesäkuuta 1938 vihitty kolmikerroksinen funkistyylinen talo on Suomen suurin piispantalo. Sen suunnitteli arkkitehti Gunnar Wahlroos.\n\nJyrkällä rinnetontilla sijaitsevasta talosta avautuu näkymä Pyhäjärvelle. Keskikerroksessa sijaitsevat pääsisäänkäynti, edustustilat, kirjasto, työhuone ja kappeli. Yläkerrassa on piispan ja hänen perheensä yksityistilat, ja alakerrasta löytyvät talonmiehen asunto sekä teknisiä tiloja.\n\nRakennus on osa Pyynikinrinteen valtakunnallisesti merkittävää rakennettua kulttuuriympäristöä ja suojeltu rakennustaiteellisin, kulttuurihistoriallisin ja maisemallisin perustein. Taiteellisia kohokohtia ovat muun muassa kuvanveistäjä Aarre Aaltosen reliefi 'Pyhiinvaeltajat' (1938) pääsisäänkäynnin yläpuolella sekä arkkitehti Wahlroosin sisko Anna Lena Hussin seinämaalaukset. Monet maalauksista peitettiin vuoden 1966 peruskorjauksen yhteydessä, mutta osa alkuperäisistä yksityiskohdista on säilynyt.\n\nWahlroosin suunnittelu yhdistää funktionalismia ja klassismin vivahteita, jotka näkyvät esimerkiksi ovien ja ikkunoiden kaariaiheissa. Muita Wahlroosin tunnettuja töitä ovat Turun Martin kirkko ja Jyväskylän Schaumanin linna.",
+    "location": {
+        "lat": 61.4928,
+        "lon": 23.7427
+    },
+    "source": "Tampereen Museot",
+    "degree": 250,
+    "url": "https://pkp-backend.fly.dev/images/20.webp",
+    "year": "1930-1949",
+    "photographer": "W. M. Gestrin",
+    "pack": "6762b150ce7a962c80a9a822"
+},
+{
+  "title_en": "Tahmela Spring",
+  "title_fi": "Tahmelan lähde",
+  "description_en": "The Tahmela Spring is located 150 meters northeast of Hyhkynlahti Bay on Lake Pyhäjärvi, nestled on the slopes of Pispalanharju in a lush grove. It is a cloudy-water spring measuring 50x30 meters. Historically, the spring provided water for residents on the southern slopes of Pispalanharju, first drawn by hand or horse and later via water pipes starting in 1907.\n\nIn the same year, the Pispala Water Cooperative was established, Finland's first water cooperative. The cooperative maintained and extended the water network to 12 kilometers, supplying over 600 homes. The water supply system, initiated by entrepreneur August Koivunen in the late 19th century, became a community-wide effort.\n\nThe spring, once well-maintained and significant for the local community, has since suffered from modern infrastructure changes, such as road construction and misguided 'cleaning' efforts. Restoring the spring to its original state would now require renovation efforts.",
+  "description_fi": "Tahmelan lähde sijaitsee 150 metriä Pyhäjärven Hyhkynlahdesta koilliseen, Pispalanharjun rinteessä rehevässä lehdossa. Sameavetisen lähteen koko on 50x30 metriä. Historiallisesti lähde tarjosi vettä Pispalanharjun etelärinteen asukkaille, ensin käsin tai hevosella haettuna ja vuodesta 1907 alkaen vesiputkien kautta.\n\nSamana vuonna perustettiin Pispalan vesijohto-osuuskunta, joka oli Suomen ensimmäinen vesiosuuskunta. Osuuskunta ylläpiti ja laajensi vesiverkoston 12 kilometrin mittaiseksi, palvellen yli 600 kotitaloutta. Vesijärjestelmän kehitti alun perin yrittäjä August Koivunen 1800-luvun lopulla, ja siitä muodostui yhteisön laajuiseksi projektiksi.\n\nLähde, joka oli aiemmin hyvin hoidettu ja tärkeä paikallisyhteisölle, on myöhemmin kärsinyt modernin infrastruktuurin aiheuttamista muutoksista, kuten tienrakennuksesta ja epäonnistuneista \"puhdistustöistä.\" Nykyään lähteen palauttaminen entiselleen vaatisi kunnostustöitä.",
+  "location": {
+      "lat": 61.5018,
+      "lon": 23.7096
+  },
+  "source": "Tampereen Museot",
+  "degree": 74,
+  "url": "https://pkp-backend.fly.dev/images/8.webp",
+  "year": "1900 - 1919",
+  "photographer": "",
+  "pack": "6762b150ce7a962c80a9a822"
+},
+{
+  "title_en": "Pispala Old Church",
+  "title_fi": "Pispalan vanha kirkko",
+  "description_en": "Pispala Old Church, originally named Pispala Prayer House, was a wooden church in the National Romantic style, designed by architect Wivi Lönn in 1908. Initially constructed by a private prayer association, it later became a church serving the local community. The church played a significant role in the religious and social life of the area.\n\nThe church underwent several renovations, including changes in 1930 led by Wivi Lönn herself. It was repurposed as a church in 1937 when the Harju Parish was established. Further renovations between 1951 and 1952, designed by architect Bertel Strömmer, included a 31-meter bell tower and modernizations to the interior, giving the church a more contemporary and urban appearance. Tragically, the church was destroyed in a fire in 1968 during the construction of the Pispala Logging Tunnel, with the cause believed to be related to electrical damage from the nearby works. The site of the church is now home to the Pispala Old Church Park, commemorating its historical and cultural significance.",
+  "description_fi": "Pispalan vanha kirkko, alun perin Pispalan rukoushuone, oli kansallisromanttista tyyliä edustava puukirkko, jonka suunnitteli arkkitehti Wivi Lönn vuonna 1908. Se rakennettiin yksityisen rukousyhdistyksen toimesta ja muutettiin myöhemmin kirkoksi palvelemaan paikallista yhteisöä. Kirkko oli merkittävä osa alueen uskonnollista ja sosiaalista elämää.\n\nKirkkoa uudistettiin useaan otteeseen, muun muassa vuonna 1930 Wivi Lönnin johdolla. Vuonna 1937 rukoushuone vuokrattiin kirkoksi juuri perustetulle Harjun seurakunnalle. Vuosina 1951–1952 arkkitehti Bertel Strömmerin suunnittelemat muutostyöt toivat kirkkoon 31 metriä korkean kellotapulin ja modernisoivat sen sisätiloja, antaen sille nykyaikaisemman ja kaupunkimaisemman ilmeen. Valitettavasti kirkko tuhoutui tulipalossa vuonna 1968, kun läheisen Pispalan uittotunnelin rakennustyöt vahingoittivat sen sähköjärjestelmiä. Kirkon paikalla on nykyään Pispalan vanhan kirkon puisto, joka kunnioittaa sen historiallista ja kulttuurista merkitystä.",
+  "location": {
+    "lat": 61.5065,
+    "lon": 23.6976
+  },
+  "source": "Tampereen Museot",
+  "degree": 326,
+  "url": "https://pkp-backend.fly.dev/images/13.webp",
+  "year": "1930-1950",
+  "photographer": "",
+  "pack": "6762b150ce7a962c80a9a822"
+},
+{
+  "title_en": "Lauri Viita Museum",
+  "title_fi": "Lauri Viidan Museo",
+  "description_en": "The Lauri Viita Museum invites you to step back in time and explore the childhood home of one of Finland's most celebrated poets and writers. Built in 1900 by Lauri Viita’s father, Emil Viita, and grandfather, Juho Nikander, the house originally served as a humble yet significant residence for a working-class family. Lauri spent his formative years here, from age 5 to 22, amidst the cozy charm of its two small apartments.\n\nConverted into a museum in 1977, the house beautifully captures the essence of early 20th-century life in Pispala. Over 80% of the original furnishings have been preserved, offering visitors an authentic glimpse into Lauri Viita’s world. You’ll find his childhood writing desk, family-made textiles, and even household items used by his mother, Alfhild, who was known for her sewing. The museum also features a selection of Lauri Viita’s literary works and personal artifacts donated by his family.\n\nOperated by the Pispala Moreeni Association and the Lauri Viita Society, the museum hosts events, guided tours, and seasonal programs. Whether you're a literary enthusiast or simply curious about Pispala’s cultural heritage, the Lauri Viita Museum is a treasure trove waiting to be discovered. The featured image shows President Urho Kekkonen visiting the museum during its early days, a testament to its cultural significance.",
+  "description_fi": "Lauri Viidan Museo tarjoaa aikamatkan tunnetun suomalaisen runoilijan ja kirjailijan lapsuudenkotiin. Emil Viidan ja Juho Nikanderin vuonna 1900 rakentama talo toimi alun perin vaatimattomana mutta merkittävänä työväenluokan asuntona. Lauri vietti täällä lapsuutensa ja nuoruutensa, ikävuodet 5–22, kahden pienen asunnon kodikkaassa ilmapiirissä.\n\nVuonna 1977 museoksi muutettu talo vie kävijänsä Pispalan 1900-luvun alkupuolen elämän tunnelmiin. Yli 80 % alkuperäisestä esineistöstä on säilynyt, tarjoten aitoja välähdyksiä Lauri Viidan elämään. Museossa on esillä hänen kouluaikainen kirjoituspöytänsä, perheen tekemiä tekstiilejä ja äiti Alfhildin ompelutöitä. Nähtävillä on myös Lauri Viidan kirjallisia teoksia ja perheen lahjoittamia esineitä.\n\nMuseota ylläpitävät Pispalan Moreeni -yhdistys ja Lauri Viita -seura, jotka järjestävät tapahtumia, opastuksia ja kausittaisia ohjelmia. Olitpa kirjallisuuden ystävä tai kiinnostunut Pispalan kulttuurihistoriasta, Lauri Viidan Museo on todellinen löytöretken arvoinen paikka. Kuvassa presidentti Kekkonen tutustumassa museoon sen alkuaikoina.",
+  "location": {
+    "lat": 61.5040,
+    "lon": 23.7100
+  },
+  "source": "Tampereen Museot",
+  "degree": 39,
+  "url": "https://pkp-backend.fly.dev/images/9.webp",
+  "year": "1976",
+  "photographer": "J. Riekkola",
+  "pack": "6762b150ce7a962c80a9a822"
+},
+{
+  "title_en": "Shot Tower",
+  "title_fi": "Haulitorni",
+  "description_en": "The Haulitorni (Pispala Shot Tower), standing tall on the northern slope of Pispalanharju, is a testament to the industrial history of Tampere. Built in 1908 by Oy K. Hjorth Ab, this 55-meter steel tower is the only remaining shot tower in Finland that was once used for manufacturing lead shot. Its robust steel frame, crafted at Germany's Krupp factories, speaks to its durability and significance.\n\nThe tower's purpose was ingenious: molten lead, mixed with antimony and arsenic for strength and smoothness, was dropped through sieves from the top of the tower. As the droplets fell, they formed perfect spheres, solidifying in a water basin at the bottom. Each week, up to 5,000 kilograms of these precisely crafted shot pellets were produced.\n\nThe factory (haulitehdas) operated until 1972, employing generations of dedicated workers, including two families bound by lifelong contracts. Today, the tower stands as a proud symbol of Pispala's industrial heritage and is recognized as a nationally significant cultural site.\n\nThough the tower is closed to the public, it remains an iconic landmark in Tampere's skyline. Following extensive renovations in 2020, which included disassembly, restoration, and a fresh coat of paint, the tower was rebuilt to its original glory. The surrounding area, featuring the factory buildings and residential homes for workers, has been preserved and transformed into a community space managed by the local heritage association, Pispalan Moreeni.",
+  "description_fi": "Haulitorni, eli Pispalan haulitehdas, seisoo ylpeänä Pispalanharjun pohjoisrinteellä ja muistuttaa Tampereen teollisesta menneisyydestä. Vuonna 1908 Oy K. Hjorth Ab:n rakentama 55 metriä korkea terästorni on Suomen ainoa jäljellä oleva haulitorni, jota käytettiin lyijyhaulien valmistukseen. Sen teräsrakenteet valmistettiin Saksan Kruppin tehtailla, ja torni onkin kestävyytensä ja merkittävyytensä symboli.\n\nTorni edusti nerokasta teknologiaa: sula lyijy, johon oli lisätty kovettavia aineita, pudotettiin tornin huipulta seulien läpi. Pudotessaan pisarat muotoutuivat täydellisiksi palloiksi ja jäähtyivät vesialtaassa. Tehtaassa valmistettiin viikoittain jopa 5 000 kiloa tarkoin muotoiltuja haulia.\n\nTehdas toimi vuoteen 1972 asti, ja sen työntekijöihin kuuluivat erityisesti kaksi perhettä, jotka olivat elinikäisissä työsopimuksissa. Nykyisin torni on Pispalan teollisen historian ylpeydenaihe ja valtakunnallisesti merkittävä kulttuuriperintökohde.\n\nVaikka torni on suljettu yleisöltä, se on edelleen Tampereen maiseman tunnettu maamerkki. Vuonna 2020 torni kävi läpi mittavan peruskorjauksen, jossa se purettiin, kunnostettiin ja rakennettiin uudelleen alkuperäiseen loistoonsa. Pispalan Moreeni -kotiseutuyhdistys hallinnoi aluetta, johon kuuluu myös tehtaan rakennukset ja työntekijöiden asuinrakennuksia. Alue toimii nykyisin yhteisön kokous- ja juhlatilana.",
+  "location": {
+    "lat": 61.5051,
+    "lon": 23.7124
+  },
+  "source": "Tampereen Museot",
+  "degree": 282,
+  "url": "https://pkp-backend.fly.dev/images/12.webp",
+  "year": "1930 -1949",
+  "photographer": "E. M. Staf",
+  "pack": "6762b150ce7a962c80a9a822"
+},
+{
+  "title_en": "Pyynikki Sports Field",
+  "title_fi": "Pyynikin Kenttä",
+  "description_en": "Pyynikki Sports Field has been the heart of Tampere's sports and community life since 1908. Its wooden stands, red fences, and surrounding birch trees whisper tales of history.\n\nWorld records of the 1920s and 1930s – such as Hannes Kolehmainen’s 25,000-meter run and Matti Järvinen’s javelin throw – make the field iconic. Today, Tampere Saints and Tampere United call Pyynikki Sports Field their home, with the artificial turf catering to both football and athletics.\n\nPyynikki Sports Field is more than just sports: it has been the stage for post-war celebrations, unforgettable concerts like the Pink Floyd tribute, and countless competitions. The field echoes stories from the Waffen-SS battalion’s homecoming to winter skating events.",
+  "description_fi": "Pyynikin Kenttä on ollut tamperelaisten liikunnan ja yhteisöllisyyden keskus jo vuodesta 1908. Kentän puiset katsomot, punainen lauta-aita ja ympäröivät koivut kertovat sen pitkästä ja monivaiheisesta historiasta.\n\n1920- ja 1930-lukujen maailmanennätykset – kuten Hannes Kolehmaisen 25 000 metrin juoksu ja Matti Järvisen keihäänheitto – tekevät kentästä ikonisen. Nykyään Tampere Saints ja Tampere United kutsuvat Pyynikin kenttää kodikseen, ja tekonurmi palvelee niin jalkapallon kuin yleisurheilun harrastajia.\n\nPyynikin Kenttä on muutakin kuin urheiluja: se on ollut näyttämönä sodanjälkeisille juhlille, unohtumattomille konserteille, kuten Pink Floyd -tribuutille, ja lukuisille kilpailuille. Kenttä henkii tarinoita aina Waffen-SS-pataljoonan kotiinpaluusta talvisiin rusettiluisteluihin.",
+  "location": {
+    "lat": 61.4952,
+    "lon": 23.7428
+  },
+  "source": "Tampereen Museot",
+  "degree": 40,
+  "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/21.webp",
+  "year": "1938",
+  "photographer": "E. M. Staf",
+  "pack": "6762b150ce7a962c80a9a822"
+}
+
+
+
+
+  
+  
+  
+  
+  
+  
+
+]
+}
