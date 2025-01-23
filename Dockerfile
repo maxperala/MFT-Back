@@ -17,6 +17,8 @@ COPY --from=builder /app/levels.json .
 
 COPY --from=builder /app/stamps.json .
 
+COPY --from=builder /app/cards.json .
+
 COPY --from=builder /app/public ./public
 
 COPY --from=builder /app/packs.json .

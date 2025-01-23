@@ -97,3 +97,7 @@ export interface DiscoverReturnData {
   newLevel: Level;
   newStamps: StampID[];
 }
+
+export interface DeletionReturnData {
+  deleted: boolean;
+}

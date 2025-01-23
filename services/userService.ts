@@ -70,3 +70,16 @@ export const loginUser = async (user: NewUser): Promise<ExposedUser> => {
     stamps: foundUser.stamps.map((id) => id.toString()),
   };
 };
+
+
+
+export const deleteUser = async (user: User): Promise<boolean> => {
+  const deletedUser = await UserModel.findByIdAndDelete(user.id);
+
+  if (!deletedUser) {
+    throw new UserNotFoundError();
+  }
+  return true;
+
+
+}

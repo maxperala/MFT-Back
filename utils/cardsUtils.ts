@@ -46,7 +46,7 @@ export const loadCardsIntoDB = async () => {
     await postcardModel.insertMany(cardsToAdd);
     console.log(`Added ${cardsToAdd.length} new cards.`);
   } else {
-    console.log("No new stamps to add");
+    console.log("No new cards to add");
   }
 
 }
