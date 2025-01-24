@@ -1,5 +1,8 @@
 import { Router, Response } from "express";
-import { validatePostRequestForPostcards as validate } from "../utils/middleware";
+import {
+  adminValidator,
+  validatePostRequestForPostcards as validate,
+} from "../utils/middleware";
 import {
   DiscoverReturnData,
   NewPostcard,
@@ -15,19 +18,28 @@ import {
 } from "../utils/errors/ApiErrors";
 // The baseurl of this router is /api/postcards
 const cardsRouter: Router = Router();
-// I need to make it so that adding cards by regular users is not possible. This will be done later.
-cardsRouter.use(authValidator);
 
-cardsRouter.post("/", validate, async (req: ValidatedRequest, res, next) => {
-  try {
-    console.log(req.user);
-    const card: NewPostcard = req.body;
-    const addedCard: Postcard = await addNewCard(card);
-    res.status(201).json(addedCard);
-  } catch (e) {
-    next(e);
+cardsRouter.use(authValidator);
+/*
+To make someone admin, you need to manually go flip them in your mongo DB. This is okay, since I plan to have only one admin account,
+and I can't see a situatuion when the app would need multiple ones
+*/
+
+cardsRouter.post(
+  "/",
+  adminValidator,
+  validate,
+  async (req: ValidatedRequest, res, next) => {
+    try {
+      console.log(req.user);
+      const card: NewPostcard = req.body;
+      const addedCard: Postcard = await addNewCard(card);
+      res.status(201).json(addedCard);
+    } catch (e) {
+      next(e);
+    }
   }
-});
+);
 
 cardsRouter.get(
   "/",

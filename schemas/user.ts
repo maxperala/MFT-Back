@@ -48,6 +48,10 @@ const mongoSchema = new Schema(
     unlocked: [{ type: Schema.Types.ObjectId, ref: "Postcard" }],
     packs: [{ type: Schema.Types.ObjectId, ref: "Pack" }],
     stamps: [{ type: Schema.Types.ObjectId, ref: "Stamp" }],
+    admin: {
+      type: Boolean,
+      required: true,
+    },
   },
   {
     toJSON: {
@@ -55,9 +59,12 @@ const mongoSchema = new Schema(
         ret.id = ret._id.toString();
         delete ret._id;
         delete ret.__v;
+        delete ret.admin;
       },
     },
   }
 );
 
 export const UserModel = model("User", mongoSchema);
+
+export type UserDocument = InstanceType<typeof UserModel>;

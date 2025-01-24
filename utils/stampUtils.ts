@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 import { StampModel, stampSchema } from "../schemas/stamp";
-import { UserModel } from "../schemas/user";
+import { UserDocument, UserModel } from "../schemas/user";
 import { SomeNewStamp, StampID } from "../types";
 import { postcardModel } from "../schemas/postcard";
 import { UserNotFoundError } from "./errors/ApiErrors";
@@ -25,16 +25,12 @@ export const loadStampsIntoDB = async () => {
   }
 };
 
-export const addFirstUseStamps = async (id: mongoose.Types.ObjectId) => {
-  const user = await UserModel.findById(id);
+export const addFirstUseStamps = async (user: UserDocument) => {
   const firstTimeStamps = await StampModel.find({ type: "firstTimeUse" });
-  if (user && firstTimeStamps) {
+  if (firstTimeStamps.length > 0) {
     const stampIDs = firstTimeStamps.map((stamp) => stamp._id);
     user.stamps = user.stamps.concat(stampIDs);
-    await user.save();
-    return user.stamps.map((s) => s.toString());
   }
-  return [];
 };
 
 export const addStampsIfNecessary = async (

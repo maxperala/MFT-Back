@@ -1,25 +1,19 @@
-import { UserModel } from "../schemas/user";
-import { UserNotFoundError } from "./errors/ApiErrors";
+import { UserDocument } from "../schemas/user";
 import { PackModel, packSchema } from "../schemas/pack";
 import { Pack } from "../types";
 const packData = require("../packs.json");
-import mongoose from "mongoose";
 
-export const addFreePacks = async (
-  id: mongoose.Types.ObjectId
-): Promise<string[]> => {
-  const user = await UserModel.findById(id);
-  if (!user) throw new UserNotFoundError();
+/*
+This function just updates the document and the actual document needs to be saved to mongo elsewhere!
+*/
+export const addFreePacks = async (user: UserDocument) => {
   const freePacks = await PackModel.find({ paid: false });
 
   for (const pack of freePacks) {
-    if (!user.packs.includes(pack._id)) {
+    if (!user.packs.some((id) => id.equals(pack._id))) {
       user.packs = user.packs.concat(pack._id);
     }
   }
-
-  await user.save();
-  return user.packs.map((id) => id.toString());
 };
 
 export const loadPacksIntoDB = async () => {

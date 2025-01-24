@@ -13,11 +13,13 @@ import {
   InvalidCardIdError,
   InvalidCodeError,
   InvalidMapRequestError,
+  NotAdminError,
   UsernameExistsError,
   UserNotFoundError,
 } from "./errors/ApiErrors";
 import jwt from "jsonwebtoken";
 import { SECRET } from "./config";
+import { mongoDocToUser } from "./typeHelpers";
 
 export const validatePostRequestForPostcards = (
   req: Request<any, any, NewPostcard>,
@@ -48,6 +50,11 @@ export const errorHandler = (
   if (error instanceof UsernameExistsError) {
     return res.status(400).json({
       errors: [error.message],
+    });
+  }
+  if (error instanceof NotAdminError) {
+    return res.status(401).json({
+      errors: ["This action is restricted to administrators."],
     });
   }
   if (
@@ -99,20 +106,32 @@ export const authValidator = async (
 
     let user = await UserModel.findById(payload.id);
     if (!user) throw new UserNotFoundError();
-    req.user = {
-      id: user._id.toString(),
-      username: user.username,
-      lvl: user.lvl,
-      secret_code_hash: user.secret_code_hash,
-      unlocked: user.unlocked.map((id) => id.toString()),
-      packs: user.packs.map((id) => id.toString()),
-      stamps: user.stamps.map((id) => id.toString()),
-    };
+    req.user = mongoDocToUser(user);
     next();
   } catch (e) {
     next(e);
   }
 };
+
+export const adminValidator = (
+  req: ValidatedRequest,
+  _res: Response,
+  next: NextFunction
+) => {
+  try {
+    const user = req.user;
+    if (!user) {
+      throw new UserNotFoundError();
+    }
+    if (!user.admin) {
+      throw new NotAdminError();
+    }
+    next();
+  } catch (e) {
+    next(e);
+  }
+};
+
 // This one is unusable for now, and probably unecessary
 export const mapReqValidator = (
   req: ValidatedRequest,
@@ -137,7 +156,7 @@ export const mapReqValidator = (
   }
 };
 
-// Probably the id can't be extracted before the route itself... I leave this here anyways incase needed later
+// Probably the id can't be extracted before the route itself... I leave this here anyways in case needed later
 export const unlockRequestValidator = (
   req: ValidatedRequest,
   _res: Response,

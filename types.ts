@@ -52,9 +52,10 @@ export interface User extends Omit<NewUser, "secret_code"> {
   unlocked: CardID[];
   packs: PackID[];
   stamps: StampID[];
+  admin: boolean;
 }
 
-export interface ExposedUser extends Omit<User, "secret_code_hash"> {
+export interface ExposedUser extends Omit<User, "secret_code_hash" | "admin"> {
   token: string;
 }
 

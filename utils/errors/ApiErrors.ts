@@ -60,3 +60,10 @@ export class InvalidPackIdError extends Error {
     this.name = "InvalidPackIdError";
   }
 }
+
+export class NotAdminError extends Error {
+  constructor() {
+    super("User is not an admin");
+    this.name = "NotAdminError";
+  }
+}

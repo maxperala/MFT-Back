@@ -11,6 +11,7 @@ import {
 import { addFreePacks } from "../utils/packUtils";
 import { LEVELS } from "../utils/config";
 import { addFirstUseStamps } from "../utils/stampUtils";
+import { mongoDocToExposedUser } from "../utils/typeHelpers";
 
 const zeroLevel = LEVELS.find((l) => l.lvl === 0);
 
@@ -26,24 +27,20 @@ export const createUser = async (user: NewUser): Promise<ExposedUser> => {
     unlocked: [],
     packs: [],
     stamps: [],
+    admin: false,
   };
-  // This part currently makes 2 db calls (one more in addFreePacks). I should refactor it so it does only one
+  /*
+  Since the mongoose document is an object it is passed as a reference, meaning these functions modify the same
+  instance and don't need to return anything. As far as I understand.
+  */
   const newUser = new UserModel(newUserData);
+  await addFreePacks(newUser);
+  await addFirstUseStamps(newUser);
   await newUser.save();
-  const packs = await addFreePacks(newUser._id);
-  const stamps = await addFirstUseStamps(newUser._id);
   const id = newUser._id.toString();
   const payload: JwtPayload = { id };
   const token = jwt.sign(payload, SECRET);
-  return {
-    id,
-    username: newUser.username,
-    lvl: newUser.lvl,
-    token,
-    unlocked: [],
-    packs: packs,
-    stamps: stamps,
-  };
+  return mongoDocToExposedUser(newUser, token);
 };
 
 /**
@@ -60,18 +57,8 @@ export const loginUser = async (user: NewUser): Promise<ExposedUser> => {
   const id = foundUser._id.toString();
   const payload: JwtPayload = { id };
   const token = jwt.sign(payload, SECRET);
-  return {
-    id,
-    username: foundUser.username,
-    lvl: foundUser.lvl,
-    token,
-    unlocked: foundUser.unlocked.map((id) => id.toString()),
-    packs: foundUser.packs.map((id) => id.toString()),
-    stamps: foundUser.stamps.map((id) => id.toString()),
-  };
+  return mongoDocToExposedUser(foundUser, token);
 };
-
-
 
 export const deleteUser = async (user: User): Promise<boolean> => {
   const deletedUser = await UserModel.findByIdAndDelete(user.id);
@@ -80,6 +67,4 @@ export const deleteUser = async (user: User): Promise<boolean> => {
     throw new UserNotFoundError();
   }
   return true;
-
-
-}
+};
