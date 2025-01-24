@@ -19,6 +19,7 @@ app.use(
     lastModified: true,
   })
 );
+app.use("/documents", express.static(path.join(__dirname, "public/documents")));
 app.use("/api/postcards", cardsRouter);
 app.use("/api/users", userRouter);
 app.use("/api/packs", packsRouter);
