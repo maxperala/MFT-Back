@@ -1,17 +1,17 @@
 {
   "stamps": [
     {
-      "asset": "https://pkp-backend.fly.dev/images/stamps/first_use.png",
+      "asset": "/images/stamps/first_use.png",
       "description_fi": "Kiitos, että lähdit mukaan tälle aikamatkalle kanssamme.\nMukavia hetkiä sovelluksen parissa!",
       "description_en": "Thank you for embarking on this journey through time with us!\nHere's to uncovering the hidden stories of Tampere – happy exploring!",
       "type": "firstTimeUse"
     },
     {
-      "asset": "https://pkp-backend.fly.dev/images/stamps/pyynikki_done.png",
+      "asset": "/images/stamps/pyynikki_done.png",
       "description_fi": "Löysit kaikki Pyynikin kohteet,\nhienoa!",
       "description_en": "You found all the Pyynikki locations,\ngreat job!",
       "type": "onCompletion",
-      "pack": "6762b150ce7a962c80a9a822"
+      "pack": "Postcards from Pyynikki"
     }
   ]
 }

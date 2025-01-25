@@ -1,0 +1,26 @@
+
+# This is for local testing. The production environment will be using mongodb atlas :)
+# It is purposely not saving data to a volume...
+services:
+  app:
+    build: .
+    ports:
+      - "3001:3001"
+    depends_on:
+      - mongodb
+    environment:
+      - PORT=3001
+      - DB_KEY=mongodb://mongodb/mft
+      - SECRET=TESTINGSECRET
+      - SERVICE_URL=http://localhost:3001
+
+  mongodb:
+    image: mongo:latest
+    container_name: mongodb
+    ports:
+      - "27017:27017"
+    restart: always
+    tmpfs:
+      - /data/db
+
+

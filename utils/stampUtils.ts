@@ -4,17 +4,19 @@ import { UserDocument, UserModel } from "../schemas/user";
 import { SomeNewStamp, StampID } from "../types";
 import { postcardModel } from "../schemas/postcard";
 import { UserNotFoundError } from "./errors/ApiErrors";
+import { buildUrl } from "./generalUtils";
 const stampData = require("../stamps.json");
 
-export const loadStampsIntoDB = async () => {
+export const loadStampsIntoDB = async (packMap: Map<string, string>) => {
   const stamps: SomeNewStamp[] = stampData.stamps;
 
   const allStamps = await StampModel.find({});
   const allStampDescriptions = allStamps.map((stamp) => stamp.description_en);
 
-  const stampsToAdd = stamps.filter(
+  let stampsToAdd = stamps.filter(
     (stamp) => !allStampDescriptions.includes(stamp.description_en)
-  );
+  )
+  stampsToAdd = jsonStampsToDBStamps(stampsToAdd, packMap)
 
   if (stampsToAdd.length > 0) {
     stampsToAdd.forEach((stamp) => stampSchema.parse(stamp));
@@ -24,6 +26,24 @@ export const loadStampsIntoDB = async () => {
     console.log("No new stamps to add");
   }
 };
+
+const jsonStampsToDBStamps = (stamps: SomeNewStamp[], packMap: Map<string, string>): SomeNewStamp[] => {
+
+  const newStamps = stamps.map((s) => {
+    const builtUrl = buildUrl(s.asset);
+    if (s.type === "onCompletion" && s.pack) {
+      const packID = packMap.get(s.pack);
+      if (!packID) {
+        throw new Error(`Invalid pack name ${s.pack} in stamp ${s.description_en}`)
+      }
+      return {...s, asset: builtUrl, pack: packID}
+    } else {
+      return {...s, asset: builtUrl}
+    }
+
+  })
+  return newStamps;
+}
 
 export const addFirstUseStamps = async (user: UserDocument) => {
   const firstTimeStamps = await StampModel.find({ type: "firstTimeUse" });

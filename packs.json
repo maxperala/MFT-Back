@@ -3,7 +3,7 @@
     {
       "name": "Postcards from Pyynikki",
       "name_fi": "Postikortteja Pyynikiltä",
-      "image_url": "http://URLHERE.fi/null.png",
+      "image_url": "/images/packs/pack-1.png",
       "paid": false
     }
   ]

@@ -8,6 +8,7 @@ primary_region = 'arn'
 
 [env]
   PORT = '3000'
+  SERVICE_URL = https://pkp-backend.fly.dev
 
 [http_service]
   internal_port = 3000

@@ -12,10 +12,10 @@
     },
     "source": "Tampereen Museot",
     "degree": 300,
-    "url": "https://pkp-backend.fly.dev/images/4.webp",
+    "url": "/images/4.webp",
     "year": "1930-1949",
     "photographer": "E. A. Bergrius",
-    "pack": "6762b150ce7a962c80a9a822"
+    "pack": "Postcards from Pyynikki"
   },
   
   {
@@ -29,10 +29,10 @@
     },
     "source": "Tampereen Museot",
     "degree": 244,
-    "url": "https://pkp-backend.fly.dev/images/1.webp",
+    "url": "/images/1.webp",
     "year": "1902",
     "photographer": "J. S. Sirén",
-    "pack": "6762b150ce7a962c80a9a822"
+    "pack": "Postcards from Pyynikki"
   },
   {
     "title_en": "Pyynikki Beach",
@@ -45,10 +45,10 @@
     },
     "source": "Tampereen Museot",
     "degree": 280,
-    "url": "https://pkp-backend.fly.dev/images/2.webp",
+    "url": "/images/2.webp",
     "year": "1956",
     "photographer": "E. M. Staf",
-    "pack": "6762b150ce7a962c80a9a822"
+    "pack": "Postcards from Pyynikki"
   },
   {
     "title_en": "Pyynikin Trikoo",
@@ -61,10 +61,10 @@
     },
     "source": "Tampereen Museot",
     "degree": 133,
-    "url": "https://pkp-backend.fly.dev/images/3.webp",
+    "url": "/images/3.webp",
     "year": "1939-1949",
     "photographer": "E. A. Bergius",
-    "pack": "6762b150ce7a962c80a9a822"
+    "pack": "Postcards from Pyynikki"
   },
   {
     "title_en": "Pispalan valtatie",
@@ -77,10 +77,10 @@
     },
     "source": "Tampereen Museot",
     "degree": 106,
-    "url": "https://pkp-backend.fly.dev/images/7.webp",
+    "url": "/images/7.webp",
     "year": "1930-1939",
     "photographer": "V. O. Kanninen",
-    "pack": "6762b150ce7a962c80a9a822"
+    "pack": "Postcards from Pyynikki"
   },
   {
     "title_en": "Field of Thermopylae",
@@ -93,10 +93,10 @@
     },
     "source": "Tampereen Museot",
     "degree": 0,
-    "url": "https://pkp-backend.fly.dev/images/10.webp",
+    "url": "/images/10.webp",
     "year": "1937",
     "photographer": "E. M. Staf",
-    "pack": "6762b150ce7a962c80a9a822"
+    "pack": "Postcards from Pyynikki"
   },
   {
     "title_en": "Pyynikki TT",
@@ -109,10 +109,10 @@
     },
     "source": "Tampereen Museot",
     "degree": 77,
-    "url": "https://pkp-backend.fly.dev/images/11.webp",
+    "url": "/images/11.webp",
     "year": "1939",
     "photographer": "E. M. Staf",
-    "pack": "6762b150ce7a962c80a9a822"
+    "pack": "Postcards from Pyynikki"
   },  
   {
     "title_en": "Koulukatu Rink",
@@ -125,10 +125,10 @@
     },
     "source": "Tampereen Museot",
     "degree": 338,
-    "url": "https://pkp-backend.fly.dev/images/15.webp",
+    "url": "/images/15.webp",
     "year": "1963",
     "photographer": "V. Lintinen",
-    "pack": "6762b150ce7a962c80a9a822"
+    "pack": "Postcards from Pyynikki"
   },
   {
     "title_en": "Näsihalli",
@@ -141,10 +141,10 @@
     },
     "source": "Tampereen Museot",
     "degree": 285,
-    "url": "https://pkp-backend.fly.dev/images/5.webp",
+    "url": "/images/5.webp",
     "year": "1938",
     "photographer": "V. Kanninen",
-    "pack": "6762b150ce7a962c80a9a822"
+    "pack": "Postcards from Pyynikki"
   },
   {
     "title_en": "Heinätori",
@@ -157,10 +157,10 @@
     },
     "source": "Tampereen Museot",
     "degree": 248,
-    "url": "https://pkp-backend.fly.dev/images/6.webp",
+    "url": "/images/6.webp",
     "year": "1931",
     "photographer": "",
-    "pack": "6762b150ce7a962c80a9a822"
+    "pack": "Postcards from Pyynikki"
   },
   {
     "title_en": "Pyynikintie 2",
@@ -173,10 +173,10 @@
     },
     "source": "Tampereen Museot",
     "degree": 256,
-    "url": "https://pkp-backend.fly.dev/images/14.webp",
+    "url": "/images/14.webp",
     "year": "1918",
     "photographer": "Atelier Laurent",
-    "pack": "6762b150ce7a962c80a9a822"
+    "pack": "Postcards from Pyynikki"
   },
   {
     "title_en": "Palomäen Swimming Facility",
@@ -189,10 +189,10 @@
     },
     "source": "Tampereen Museot",
     "degree": 309,
-    "url": "https://pkp-backend.fly.dev/images/16.webp",
+    "url": "/images/16.webp",
     "year": "1940-1959",
     "photographer": "V. Kanninen",
-    "pack": "6762b150ce7a962c80a9a822"
+    "pack": "Postcards from Pyynikki"
   },
   {
     "title_en": "Pyynikki Matchstick Factory",
@@ -205,10 +205,10 @@
     },
     "source": "Tampereen Museot",
     "degree": 90,
-    "url": "https://pkp-backend.fly.dev/images/17.webp",
+    "url": "/images/17.webp",
     "year": "1900-1909",
     "photographer": "",
-    "pack": "6762b150ce7a962c80a9a822"
+    "pack": "Postcards from Pyynikki"
   },
   {
     "title_en": "Kilometer House",
@@ -221,10 +221,10 @@
     },
     "source": "Tampereen Museot",
     "degree": 121,
-    "url": "https://pkp-backend.fly.dev/images/18.webp",
+    "url": "/images/18.webp",
     "year": "1923",
     "photographer": "",
-    "pack": "6762b150ce7a962c80a9a822"
+    "pack": "Postcards from Pyynikki"
   },
   {
     "title_en": "Pyynikki Summer Theatre",
@@ -237,10 +237,10 @@
     },
     "source": "Tampereen Museot",
     "degree": 200,
-    "url": "https://pkp-backend.fly.dev/images/19.webp",
+    "url": "/images/19.webp",
     "year": "1959",
     "photographer": "J. Riekkola",
-    "pack": "6762b150ce7a962c80a9a822"
+    "pack": "Postcards from Pyynikki"
 },
 {
     "title_en": "Bishop's House",
@@ -253,10 +253,10 @@
     },
     "source": "Tampereen Museot",
     "degree": 250,
-    "url": "https://pkp-backend.fly.dev/images/20.webp",
+    "url": "/images/20.webp",
     "year": "1930-1949",
     "photographer": "W. M. Gestrin",
-    "pack": "6762b150ce7a962c80a9a822"
+    "pack": "Postcards from Pyynikki"
 },
 {
   "title_en": "Tahmela Spring",
@@ -269,10 +269,10 @@
   },
   "source": "Tampereen Museot",
   "degree": 74,
-  "url": "https://pkp-backend.fly.dev/images/8.webp",
+  "url": "/images/8.webp",
   "year": "1900 - 1919",
   "photographer": "",
-  "pack": "6762b150ce7a962c80a9a822"
+  "pack": "Postcards from Pyynikki"
 },
 {
   "title_en": "Pispala Old Church",
@@ -285,10 +285,10 @@
   },
   "source": "Tampereen Museot",
   "degree": 326,
-  "url": "https://pkp-backend.fly.dev/images/13.webp",
+  "url": "/images/13.webp",
   "year": "1930-1950",
   "photographer": "",
-  "pack": "6762b150ce7a962c80a9a822"
+  "pack": "Postcards from Pyynikki"
 },
 {
   "title_en": "Lauri Viita Museum",
@@ -301,10 +301,10 @@
   },
   "source": "Tampereen Museot",
   "degree": 39,
-  "url": "https://pkp-backend.fly.dev/images/9.webp",
+  "url": "/images/9.webp",
   "year": "1976",
   "photographer": "J. Riekkola",
-  "pack": "6762b150ce7a962c80a9a822"
+  "pack": "Postcards from Pyynikki"
 },
 {
   "title_en": "Shot Tower",
@@ -317,10 +317,10 @@
   },
   "source": "Tampereen Museot",
   "degree": 282,
-  "url": "https://pkp-backend.fly.dev/images/12.webp",
+  "url": "/images/12.webp",
   "year": "1930 -1949",
   "photographer": "E. M. Staf",
-  "pack": "6762b150ce7a962c80a9a822"
+  "pack": "Postcards from Pyynikki"
 },
 {
   "title_en": "Pyynikki Sports Field",
@@ -333,10 +333,10 @@
   },
   "source": "Tampereen Museot",
   "degree": 40,
-  "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/21.webp",
+  "url": "/images/21.webp",
   "year": "1938",
   "photographer": "E. M. Staf",
-  "pack": "6762b150ce7a962c80a9a822"
+  "pack": "Postcards from Pyynikki"
 }
 
 

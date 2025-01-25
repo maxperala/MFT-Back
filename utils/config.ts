@@ -14,7 +14,8 @@ if (process.env.MODE === "dev") {
 const PORT: number = Number(process.env.PORT);
 if (isNaN(PORT)) throw new Error("Please provide a valid PORT variable!");
 let DB_KEY: string;
-if (process.env.DB_KEY) {
+
+  if (process.env.DB_KEY) {
   DB_KEY = process.env.DB_KEY;
 } else {
   throw new Error("Please provide a DB Key!");
@@ -37,16 +38,20 @@ const BACKUP_LEVEL: Level = {
 
 export const initialize = async () => {
   try {
-    await loadCardsIntoDB();
-    await loadPacksIntoDB();
-    await loadStampsIntoDB();
+    const packMap = await loadPacksIntoDB();
+    await loadCardsIntoDB(packMap);
+    await loadStampsIntoDB(packMap);
   } catch (e) {
     console.log(e);
     throw new Error("Failed to initialize the database, check syntax of data json files and try again!");
   }
 
-  
-  
 }
 
-export { PORT, DB_KEY, SECRET, LEVELS, BACKUP_LEVEL };
+const SERVICE_URL = process.env.SERVICE_URL;
+
+if (!SERVICE_URL) {
+  throw new Error("Please provide the SERVICE_URL variable!")
+}
+
+export { PORT, DB_KEY, SECRET, LEVELS, BACKUP_LEVEL, SERVICE_URL };

@@ -1,6 +1,7 @@
 import { UserDocument } from "../schemas/user";
 import { PackModel, packSchema } from "../schemas/pack";
 import { Pack } from "../types";
+import { buildUrl } from "./generalUtils";
 const packData = require("../packs.json");
 
 /*
@@ -16,13 +17,15 @@ export const addFreePacks = async (user: UserDocument) => {
   }
 };
 
-export const loadPacksIntoDB = async () => {
+export const loadPacksIntoDB = async (): Promise<Map<string, string>> => {
   const packs: Pack[] = packData.packs;
 
   const allPacks = await PackModel.find({});
   const allPackNames = allPacks.map((pack) => pack.name);
 
-  const packsToAdd = packs.filter((pack) => !allPackNames.includes(pack.name));
+  const packsToAdd = packs.filter((pack) => !allPackNames.includes(pack.name)).map((p) => {
+    return {...p, image_url: buildUrl(p.image_url)}
+  })
 
   if (packsToAdd.length > 0) {
     packsToAdd.forEach((pack) => packSchema.parse(pack));
@@ -31,4 +34,11 @@ export const loadPacksIntoDB = async () => {
   } else {
     console.log("No new packs to add");
   }
+  const newAllPacks = await PackModel.find({});
+  const packMap = new Map<string, string>();
+  for (const pack of newAllPacks) {
+    packMap.set(pack.name, pack._id.toString());
+  }
+  
+  return packMap;
 };
