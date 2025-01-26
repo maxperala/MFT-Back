@@ -6,3 +6,10 @@ body {
 li {
     padding: 1%;
 }
+
+#info-background {
+    background-color: #E9D8A6;
+    border-radius: 6px;
+    padding: 2%;
+    
+}
