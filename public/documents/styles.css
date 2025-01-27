@@ -1,13 +1,19 @@
-body {
+#privacy-body {
     font-family: "Roboto";
     padding-left: 2%;
     padding-right: 2%;
 }
+
+#info-body {
+    background-color: #E9D8A6;
+}
+
 li {
     padding: 1%;
 }
 
 #info-background {
+    font-family: "Roboto";
     background-color: #E9D8A6;
     border-radius: 6px;
     padding: 2%;
