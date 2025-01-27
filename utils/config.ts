@@ -15,7 +15,7 @@ const PORT: number = Number(process.env.PORT);
 if (isNaN(PORT)) throw new Error("Please provide a valid PORT variable!");
 let DB_KEY: string;
 
-  if (process.env.DB_KEY) {
+if (process.env.DB_KEY) {
   DB_KEY = process.env.DB_KEY;
 } else {
   throw new Error("Please provide a DB Key!");
@@ -43,15 +43,30 @@ export const initialize = async () => {
     await loadStampsIntoDB(packMap);
   } catch (e) {
     console.log(e);
-    throw new Error("Failed to initialize the database, check syntax of data json files and try again!");
+    throw new Error(
+      "Failed to initialize the database, check syntax of data json files and try again!"
+    );
   }
-
-}
+};
 
 const SERVICE_URL = process.env.SERVICE_URL;
 
 if (!SERVICE_URL) {
-  throw new Error("Please provide the SERVICE_URL variable!")
+  throw new Error("Please provide a SERVICE_URL variable!");
 }
 
-export { PORT, DB_KEY, SECRET, LEVELS, BACKUP_LEVEL, SERVICE_URL };
+const MAPBOX_PUBLIC_KEY = process.env.MAPBOX_PUBLIC_KEY as string;
+
+if (!MAPBOX_PUBLIC_KEY) {
+  throw new Error("Please provide a MAPBOX_PUBLIC_KEY variable!");
+}
+
+export {
+  PORT,
+  DB_KEY,
+  SECRET,
+  LEVELS,
+  BACKUP_LEVEL,
+  SERVICE_URL,
+  MAPBOX_PUBLIC_KEY,
+};

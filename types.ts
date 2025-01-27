@@ -57,6 +57,7 @@ export interface User extends Omit<NewUser, "secret_code"> {
 
 export interface ExposedUser extends Omit<User, "secret_code_hash" | "admin"> {
   token: string;
+  mapkey: string;
 }
 
 export interface JwtPayload {

@@ -1,5 +1,6 @@
 import { UserDocument } from "../schemas/user";
 import { ExposedUser, User } from "../types";
+import { MAPBOX_PUBLIC_KEY } from "./config";
 
 export const mongoDocToExposedUser = (
   doc: UserDocument,
@@ -13,6 +14,7 @@ export const mongoDocToExposedUser = (
     unlocked: doc.unlocked.map((v) => v.toString()),
     packs: doc.packs.map((v) => v.toString()),
     stamps: doc.stamps.map((v) => v.toString()),
+    mapkey: MAPBOX_PUBLIC_KEY,
   };
 };
 
