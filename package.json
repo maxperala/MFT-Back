@@ -1,6 +1,6 @@
 {
   "name": "memories-from-tampere",
-  "version": "0.7.0",
+  "version": "0.7.1",
   "description": "Backend Memories From Tampere mobiilisovellukselle",
   "main": "index.js",
   "scripts": {
