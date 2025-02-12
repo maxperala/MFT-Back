@@ -15,6 +15,13 @@ import { mongoDocToExposedUser } from "../utils/typeHelpers";
 
 const zeroLevel = LEVELS.find((l) => l.lvl === 0);
 
+/**
+ * Creates a new user account with initial settings
+ * @param {NewUser} user - New user data with username and secret code
+ * @returns {Promise<ExposedUser>} Created user data with JWT token
+ * @throws {UsernameExistsError} If username is already taken
+ * @remarks Automatically adds free packs and first-use stamps to new accounts
+ */
 export const createUser = async (user: NewUser): Promise<ExposedUser> => {
   if (await UserModel.findOne({ username: user.username })) {
     throw new UsernameExistsError();
@@ -44,8 +51,12 @@ export const createUser = async (user: NewUser): Promise<ExposedUser> => {
 };
 
 /**
- * I could check if new free packs are available on each login/start of app.
- * But it feels more special IMO if the user needs to go and collect it from the store page (to be implemented later)
+ * Authenticates a user and generates a JWT token
+ * @param {NewUser} user - User credentials with username and secret code
+ * @returns {Promise<ExposedUser>} User data with new JWT token
+ * @throws {UserNotFoundError} If username is not found
+ * @throws {InvalidCodeError} If secret code is incorrect
+ * @remarks Free packs must be collected manually from store page, if not claimed on register
  */
 export const loginUser = async (user: NewUser): Promise<ExposedUser> => {
   const foundUser = await UserModel.findOne({
@@ -60,6 +71,12 @@ export const loginUser = async (user: NewUser): Promise<ExposedUser> => {
   return mongoDocToExposedUser(foundUser, token);
 };
 
+/**
+ * Permanently deletes a user account
+ * @param {User} user - User to be deleted
+ * @returns {Promise<boolean>} True if deletion was successful
+ * @throws {UserNotFoundError} If user is not found
+ */
 export const deleteUser = async (user: User): Promise<boolean> => {
   const deletedUser = await UserModel.findByIdAndDelete(user.id);
 

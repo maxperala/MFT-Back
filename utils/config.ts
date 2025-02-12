@@ -5,16 +5,31 @@ import { loadCardsIntoDB } from "./cardsUtils";
 import { loadStampsIntoDB } from "./stampUtils";
 import { loadPacksIntoDB } from "./packUtils";
 const lvlData: LevelData = require("../levels.json");
+
+/**
+ * Configuration module for application settings and database initialization
+ * Loads environment variables and establishes database connection
+ * @module config
+ */
+
 // Set MODE variable to ENV in package.json if you wish to use a dotenv file :)
 if (process.env.MODE === "dev") {
   const dotenv = require("dotenv");
   dotenv.config();
 }
 
+/**
+ * Application port number from environment
+ * @throws {Error} If PORT is not a valid number
+ */
 const PORT: number = Number(process.env.PORT);
 if (isNaN(PORT)) throw new Error("Please provide a valid PORT variable!");
-let DB_KEY: string;
 
+/**
+ * MongoDB connection string from environment
+ * @throws {Error} If DB_KEY is not provided
+ */
+let DB_KEY: string;
 if (process.env.DB_KEY) {
   DB_KEY = process.env.DB_KEY;
 } else {
@@ -24,6 +39,11 @@ if (process.env.DB_KEY) {
 mongoose.connect(DB_KEY).then(() => {
   console.log("Connected to MongoDB");
 });
+
+/**
+ * JWT secret key from environment
+ * @throws {Error} If SECRET is not provided
+ */
 if (!process.env.SECRET) throw new Error("Please provide a secret variable!");
 const SECRET: Secret = process.env.SECRET;
 
@@ -36,6 +56,10 @@ const BACKUP_LEVEL: Level = {
   limit: 0,
 };
 
+/**
+ * Initializes database with packs, cards, and stamps from JSON files
+ * @throws {Error} If initialization fails due to invalid JSON data
+ */
 export const initialize = async () => {
   try {
     const packMap = await loadPacksIntoDB();
@@ -49,14 +73,20 @@ export const initialize = async () => {
   }
 };
 
+/**
+ * Base URL for the service from environment
+ * @throws {Error} If SERVICE_URL is not provided
+ */
 const SERVICE_URL = process.env.SERVICE_URL;
-
 if (!SERVICE_URL) {
   throw new Error("Please provide a SERVICE_URL variable!");
 }
 
+/**
+ * Mapbox API key from environment
+ * @throws {Error} If MAPBOX_PUBLIC_KEY is not provided
+ */
 const MAPBOX_PUBLIC_KEY = process.env.MAPBOX_PUBLIC_KEY as string;
-
 if (!MAPBOX_PUBLIC_KEY) {
   throw new Error("Please provide a MAPBOX_PUBLIC_KEY variable!");
 }

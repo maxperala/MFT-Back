@@ -13,6 +13,7 @@ services:
       - DB_KEY=mongodb://mongodb/mft
       - SECRET=TESTINGSECRET
       - SERVICE_URL=http://localhost:3001
+      - MAPBOX_PUBLIC_KEY=CHANGE_THIS
 
   mongodb:
     image: mongo:latest

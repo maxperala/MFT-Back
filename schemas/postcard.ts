@@ -2,9 +2,22 @@ import z from "zod";
 
 import { model, Schema, isValidObjectId } from "mongoose";
 
-// We use zod-mongoose to automatically create the schema. Will change if bugs are found.
-// Typescript typings are also infered from this Zod schema.
-
+/**
+ * Zod schema for validating postcard data
+ * @property {string} title_en - English title (3-50 characters)
+ * @property {string} title_fi - Finnish title (3-50 characters)
+ * @property {string} description_en - English description (min 10 characters)
+ * @property {string} description_fi - Finnish description (min 10 characters)
+ * @property {object} location - Geographic coordinates
+ * @property {number} location.lat - Latitude (-90 to 90)
+ * @property {number} location.lon - Longitude (-180 to 180)
+ * @property {string} source - Author/source of the postcard
+ * @property {number} degree - Rotation degree (0-360)
+ * @property {string} url - URL to postcard image
+ * @property {string} year - Year of the postcard
+ * @property {string} photographer - Photographer's name (empty string if unknown)
+ * @property {string} pack - MongoDB ObjectId reference to associated pack
+ */
 export const PostcardSchema = z.object({
   title_en: z
     .string()
@@ -49,6 +62,11 @@ export const PostcardSchema = z.object({
     .refine((id) => isValidObjectId(id), { message: "Not a valid ObjectID" }),
 });
 
+/**
+ * Mongoose schema for postcard documents
+ * Includes bilingual titles and descriptions, location data, metadata, and pack reference
+ * Transforms _id to id and pack reference to string in JSON responses
+ */
 const mongoSchema = new Schema(
   {
     title_en: {
@@ -115,7 +133,5 @@ const mongoSchema = new Schema(
     },
   }
 );
-
-//const mongoSchema = zodSchemaRaw(PostcardSchema);
 
 export const postcardModel = model("Postcard", mongoSchema);

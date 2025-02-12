@@ -2,17 +2,30 @@ import z from "zod";
 import { model, Schema } from "mongoose";
 
 /**
- * The card includes a reference to the pack it belongs to.
- * Level prop is currently implemented but I'm gravitating towards
- * the final product not having levels. Just a progress on how many cards
- * have been discovered and maybe some achievements. I feel like adding
- * levels does not actually add anything to the experience.
+ * Zod schema for user validation
+ * @property {string} username - User's username (4-15 characters)
+ * @property {string} secret_code - User's unhashed secret code
  */
 export const UserSchema = z.object({
   username: z.string().min(4).max(15),
   secret_code: z.string(),
 });
 
+/**
+ * Mongoose schema for user documents
+ * @property {string} username - Unique username
+ * @property {string} secret_code_hash - Hashed secret code for authentication
+ * @property {object} lvl - User level information
+ * @property {number} lvl.lvl - Current level number
+ * @property {string} lvl.name_en - Level name in English
+ * @property {string} lvl.name_fi - Level name in Finnish
+ * @property {number} lvl.limit - Experience limit for current level
+ * @property {ObjectId[]} unlocked - References to discovered postcards
+ * @property {ObjectId[]} packs - References to unlocked packs
+ * @property {ObjectId[]} stamps - References to earned stamps
+ * @property {boolean} admin - Admin status flag (hidden in JSON responses)
+ * @remarks Transforms MongoDB _id to id and removes admin flag in JSON responses
+ */
 const mongoSchema = new Schema(
   {
     username: {

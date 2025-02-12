@@ -1,6 +1,13 @@
 import { model, Schema } from "mongoose";
 import z from "zod";
 
+/**
+ * Zod schema for validating pack data
+ * @property {string} name - Pack name in English (min 4 characters)
+ * @property {string} name_fi - Pack name in Finnish (min 4 characters)
+ * @property {string} image_url - URL for pack's image
+ * @property {boolean} paid - Whether the pack requires payment to unlock
+ */
 export const packSchema = z.object({
   name: z.string().min(4),
   name_fi: z.string().min(4),
@@ -8,6 +15,11 @@ export const packSchema = z.object({
   paid: z.boolean(),
 });
 
+/**
+ * Mongoose schema for pack documents
+ * Includes name in English and Finnish, image URL, and paid status
+ * Transforms _id to id in JSON responses
+ */
 const mongoSchema = new Schema(
   {
     name: {

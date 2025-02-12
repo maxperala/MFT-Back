@@ -12,7 +12,6 @@ import {
 import {
   InvalidCardIdError,
   InvalidCodeError,
-  InvalidMapRequestError,
   NotAdminError,
   UsernameExistsError,
   UserNotFoundError,
@@ -21,6 +20,12 @@ import jwt from "jsonwebtoken";
 import { SECRET } from "./config";
 import { mongoDocToUser } from "./typeHelpers";
 
+/**
+ * Validates postcard data in request body against PostcardSchema
+ * @param {Request} req - Express request with postcard data
+ * @param {Response} _res - Express response (unused)
+ * @param {NextFunction} next - Express next middleware function
+ */
 export const validatePostRequestForPostcards = (
   req: Request<any, any, NewPostcard>,
   _res: Response,
@@ -34,6 +39,14 @@ export const validatePostRequestForPostcards = (
   }
 };
 
+/**
+ * Global error handler middleware
+ * @param {unknown} error - Error to be handled
+ * @param {Request} _req - Express request (unused)
+ * @param {Response} res - Express response
+ * @param {NextFunction} _next - Express next middleware function (unused)
+ * @returns {Response} Error response with appropriate status code and message
+ */
 export const errorHandler = (
   error: unknown,
   _req: Request,
@@ -72,6 +85,12 @@ export const errorHandler = (
   });
 };
 
+/**
+ * Validates user data in request body against UserSchema
+ * @param {Request} req - Express request with user data
+ * @param {Response} _res - Express response (unused)
+ * @param {NextFunction} next - Express next middleware function
+ */
 export const userValidator = (
   req: Request<any, any, NewUser>,
   _res: Response,
@@ -85,6 +104,13 @@ export const userValidator = (
   }
 };
 
+/**
+ * Validates JWT token and adds user data to request
+ * @param {ValidatedRequest} req - Express request with authorization header
+ * @param {Response} _res - Express response (unused)
+ * @param {NextFunction} next - Express next middleware function
+ * @throws {UserNotFoundError} If token is missing or user not found
+ */
 export const authValidator = async (
   req: ValidatedRequest,
   _res: Response,
@@ -113,6 +139,14 @@ export const authValidator = async (
   }
 };
 
+/**
+ * Validates that the user has admin privileges
+ * @param {ValidatedRequest} req - Express request with user data
+ * @param {Response} _res - Express response (unused)
+ * @param {NextFunction} next - Express next middleware function
+ * @throws {UserNotFoundError} If user is not found
+ * @throws {NotAdminError} If user is not an admin
+ */
 export const adminValidator = (
   req: ValidatedRequest,
   _res: Response,
@@ -132,31 +166,14 @@ export const adminValidator = (
   }
 };
 
-// This one is unusable for now, and probably unecessary
-export const mapReqValidator = (
-  req: ValidatedRequest,
-  _res: Response,
-  next: NextFunction
-) => {
-  try {
-    const { x, y, z } = req.params;
-    const xnum = parseFloat(x);
-    const ynum = parseFloat(y);
-    const znum = parseFloat(z);
-    if ((isNaN(xnum), isNaN(ynum), isNaN(znum))) {
-      throw new InvalidMapRequestError();
-    }
-    req.coords = {
-      x: xnum,
-      y: ynum,
-      z: znum,
-    };
-  } catch (e) {
-    next(e);
-  }
-};
-
-// Probably the id can't be extracted before the route itself... I leave this here anyways in case needed later
+/**
+ * Validates card unlock request parameters
+ * @param {ValidatedRequest} req - Express request with card ID
+ * @param {Response} _res - Express response (unused)
+ * @param {NextFunction} next - Express next middleware function
+ * @throws {InvalidCardIdError} If card ID is missing
+ * @remarks May be refactored in future
+ */
 export const unlockRequestValidator = (
   req: ValidatedRequest,
   _res: Response,

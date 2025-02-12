@@ -4,9 +4,12 @@ import { Pack } from "../types";
 import { buildUrl } from "./generalUtils";
 const packData = require("../packs.json");
 
-/*
-This function just updates the document and the actual document needs to be saved to mongo elsewhere!
-*/
+/**
+ * Adds all free packs to a user's pack collection
+ * @param {UserDocument} user - Mongoose user document to update
+ * @remarks This function only updates the document in memory.
+ * The document needs to be saved to MongoDB separately.
+ */
 export const addFreePacks = async (user: UserDocument) => {
   const freePacks = await PackModel.find({ paid: false });
 
@@ -17,15 +20,23 @@ export const addFreePacks = async (user: UserDocument) => {
   }
 };
 
+/**
+ * Loads packs from JSON file into database and creates name-to-ID mapping
+ * @returns {Promise<Map<string, string>>} Map of pack names to their MongoDB IDs
+ * @remarks Skips packs that already exist (based on name)
+ *          Updates image URLs with service base URL
+ */
 export const loadPacksIntoDB = async (): Promise<Map<string, string>> => {
   const packs: Pack[] = packData.packs;
 
   const allPacks = await PackModel.find({});
   const allPackNames = allPacks.map((pack) => pack.name);
 
-  const packsToAdd = packs.filter((pack) => !allPackNames.includes(pack.name)).map((p) => {
-    return {...p, image_url: buildUrl(p.image_url)}
-  })
+  const packsToAdd = packs
+    .filter((pack) => !allPackNames.includes(pack.name))
+    .map((p) => {
+      return { ...p, image_url: buildUrl(p.image_url) };
+    });
 
   if (packsToAdd.length > 0) {
     packsToAdd.forEach((pack) => packSchema.parse(pack));
@@ -39,6 +50,6 @@ export const loadPacksIntoDB = async (): Promise<Map<string, string>> => {
   for (const pack of newAllPacks) {
     packMap.set(pack.name, pack._id.toString());
   }
-  
+
   return packMap;
 };

@@ -6,6 +6,10 @@ import {
   UserNotFoundError,
 } from "../utils/errors/ApiErrors";
 
+/**
+ * Retrieves all available packs from the database
+ * @returns {Promise<Pack[]>} Array of packs with formatted IDs and fields
+ */
 export const getAllPacks = async (): Promise<Pack[]> => {
   const packs = await PackModel.find({});
   return packs.map((pack) => {
@@ -19,6 +23,16 @@ export const getAllPacks = async (): Promise<Pack[]> => {
   });
 };
 
+/**
+ * Unlocks a pack for a specific user
+ * @param {string} userID - ID of the user unlocking the pack
+ * @param {string} packID - ID of the pack to unlock
+ * @returns {Promise<string[]>} Array of pack IDs that the user has unlocked
+ * @throws {UserNotFoundError} If user is not found
+ * @throws {InvalidPackIdError} If pack is not found
+ * @throws {Error} If attempting to unlock a paid pack (not implemented)
+ * @remarks Paid pack functionality is not yet implemented
+ */
 export const unlockPack = async (userID: string, packID: string) => {
   const user = await UserModel.findById(userID);
   if (!user) throw new UserNotFoundError();

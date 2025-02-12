@@ -16,7 +16,11 @@ import {
   InvalidCardIdError,
   UserNotFoundError,
 } from "../utils/errors/ApiErrors";
-// The baseurl of this router is /api/postcards
+
+/**
+ * Router for handling postcard-related endpoints
+ * Base URL: /api/postcards
+ */
 const cardsRouter: Router = Router();
 
 cardsRouter.use(authValidator);
@@ -25,6 +29,14 @@ To make someone admin, you need to manually go flip them in your mongo DB. This 
 and I can't see a situatuion when the app would need multiple ones
 */
 
+/**
+ * Creates a new postcard. Requires admin privileges.
+ * @route POST /api/postcards
+ * @param {ValidatedRequest} req - Request with validated postcard data in body
+ * @param {Response} res - Express response object
+ * @param {Function} next - Express next middleware function
+ * @returns {Promise<void>} New postcard data
+ */
 cardsRouter.post(
   "/",
   adminValidator,
@@ -41,6 +53,14 @@ cardsRouter.post(
   }
 );
 
+/**
+ * Retrieves all postcards available to the user based on their packs
+ * @route GET /api/postcards
+ * @param {ValidatedRequest} req - Request with user data
+ * @param {Response} res - Express response object
+ * @param {Function} next - Express next middleware function
+ * @returns {Promise<void>} Array of postcards
+ */
 cardsRouter.get(
   "/",
   async (req: ValidatedRequest, res: Response<Postcard[]>, next) => {
@@ -56,6 +76,14 @@ cardsRouter.get(
 );
 
 // This route probably has no use whatsover and will be deleted in prod. Good for testing though...
+/**
+ * Returns list of unlocked postcards for the authenticated user
+ * @route GET /api/postcards/unlocked
+ * @param {ValidatedRequest} req - Request with user data
+ * @param {Response} res - Express response object
+ * @param {Function} next - Express next middleware function
+ * @returns {Promise<void>} Object containing array of unlocked postcard IDs
+ */
 cardsRouter.get(
   "/unlocked",
   async (req: ValidatedRequest, res: Response<UnlockedResponse>, next) => {
@@ -72,7 +100,17 @@ cardsRouter.get(
     }
   }
 );
-// Checking for user doesn't matter at this point, since the validator does not let a bad request trough. Purely for ts stuff
+
+/**
+ * Marks a postcard as discovered/unlocked for the authenticated user
+ * @route POST /api/postcards/unlocked/:id
+ * @param {ValidatedRequest} req - Request with postcard ID in params
+ * @param {Response} res - Express response object
+ * @param {Function} next - Express next middleware function
+ * @returns {Promise<void>} Discovery status and updated user data
+ * @throws {InvalidCardIdError} If postcard ID is invalid
+ * @throws {UserNotFoundError} If user is not found
+ */
 cardsRouter.post(
   "/unlocked/:id",
   async (req: ValidatedRequest, res: Response<DiscoverReturnData>, next) => {

@@ -1,6 +1,15 @@
 import { model, Schema } from "mongoose";
 import z from "zod";
 
+/**
+ * Zod schema for validating stamp data
+ * @property {string} asset - URL to stamp image asset
+ * @property {string} description_fi - Finnish description of the stamp
+ * @property {string} description_en - English description of the stamp
+ * @property {string} [pack] - Optional reference to associated pack (required for 'onCompletion' type)
+ * @property {('onCompletion'|'firstTimeUse')} type - Type of stamp achievement
+ * @remarks Pack reference is required when type is 'onCompletion'
+ */
 export const stampSchema = z
   .object({
     asset: z.string().url(),
@@ -16,6 +25,11 @@ export const stampSchema = z
     return true;
   });
 
+/**
+ * Mongoose schema for stamp documents
+ * Includes bilingual descriptions, asset URL, type, and optional pack reference
+ * Transforms _id to id in JSON responses
+ */
 const mongoSchema = new Schema(
   {
     asset: {
