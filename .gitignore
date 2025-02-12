@@ -4,3 +4,5 @@ build
 node_modules
 testing-cdn/images
 .DS_Store
+.obsidian
+.obsidian/

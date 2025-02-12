@@ -7,10 +7,23 @@ import userRouter from "./routes/userRouter";
 import packsRouter from "./routes/packsRouter";
 import stampRouter from "./routes/stampRouter";
 
-// Used to load the pack data from the JSON file into Mongo. If there are new packs. And the same for stamps :)
+/**
+ * Main application entry point
+ * Initializes Express server with routes and middleware
+ * @module index
+ */
+
+// Initialize database with packs and stamps from JSON files
 initialize();
+
 const app = express();
 app.use(express.json());
+
+/**
+ * Static file serving configuration
+ * - Images are cached for 1 year with etag and last-modified headers
+ * - Documents are served without caching
+ */
 app.use(
   "/images",
   express.static(path.join(__dirname, "public/images"), {
@@ -20,15 +33,21 @@ app.use(
   })
 );
 app.use("/documents", express.static(path.join(__dirname, "public/documents")));
+
+// API routes
 app.use("/api/postcards", cardsRouter);
 app.use("/api/users", userRouter);
 app.use("/api/packs", packsRouter);
 app.use("/api/stamps", stampRouter);
 
+/**
+ * Root endpoint returns welcome message in Finnish
+ */
 app.get("/", (_req: Request, res: Response) => {
-  res.status(200).send("Tervetuloa Pyynikin Postikortit API:hin.");
+  res.status(200).send("Tervetuloa Muistoja Tampereelta API:hin.");
 });
 
+// Global error handler
 app.use(errorHandler);
 
 app.listen(PORT, () => {
